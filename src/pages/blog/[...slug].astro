@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import site from '../../data/site.json';
+import PageHero from '../../components/PageHero.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const fmt = (d) => d.toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title={`${post.data.title} | TGS Construcción`} description={post.data.description}>
+  <PageHero
+    antetitulo={fmt(post.data.date)}
+    titulo={post.data.title}
+    bajada={post.data.description}
+    alto="sm"
+  />
+
+  <article class="section">
+    <div class="wrap">
+      <div class="article">
+        <a href="/blog/" style="color:var(--gold-deep);font-size:14px;font-weight:500;display:inline-flex;align-items:center;min-height:44px">← Volver al blog</a>
+        <Content />
+      </div>
+    </div>
+  </article>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>¿Necesitas un presupuesto?</h2>
+      <p>Visitamos su propiedad sin costo y le entregamos un presupuesto detallado en 24 horas.</p>
+      <div class="cta__btns">
+        <a href={`https://wa.me/${site.empresa.whatsapp}`} class="btn btn--dark">Escribir por WhatsApp</a>
+        <a href="/contacto/" class="btn" style="background:#fff">Pedir presupuesto</a>
+      </div>
+    </div>
+  </section>
+</Base>

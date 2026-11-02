@@ -1,0 +1,17 @@
+export const ICO: Record<string, string> = {
+  ducha:    '<path d="M12 2v3"/><rect x="4" y="5" width="16" height="4" rx="2"/><path d="M7 12v4M12 12v6M17 12v4"/>',
+  integral: '<path d="M12 3l8 4.5-8 4.5-8-4.5L12 3z"/><path d="M4 12l8 4.5 8-4.5"/><path d="M4 16.5L12 21l8-4.5"/>',
+  pintura:  '<rect x="4" y="5" width="10" height="5" rx="1"/><path d="M14 7.5h4v3h-4"/><path d="M8 10v3"/><rect x="6.5" y="13" width="3" height="6" rx="1"/>',
+  muebles:  '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 4v16"/><path d="M15.5 10v2M8.5 10v2"/>',
+  logia:    '<rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="14" r="4"/><path d="M7 7h.01"/>',
+  techo:    '<path d="M3 11L12 4l9 7"/><path d="M5 10v9h14v-9"/>',
+  sol:      '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/>',
+  deck:     '<path d="M3 8h18M3 12h18M3 16h18"/><path d="M6 8v12M18 8v12"/>',
+  casa:     '<path d="M4 10l8-6 8 6"/><path d="M6 9v11h12V9"/><path d="M10 20v-6h4v6"/>',
+  pergola:  '<path d="M3 5h18"/><path d="M6 5v15M12 5v15M18 5v15"/>',
+  parrilla: '<rect x="4" y="9" width="16" height="9" rx="2"/><path d="M8 9V6M12 9V6M16 9V6"/><path d="M8.5 13.5h7"/>',
+  llave:    '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M9 10h6M9 14h6M9 18h4"/>',
+  escudo:   '<path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/>',
+  reloj:    '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  red:      '<circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 7.5L6.5 16M12 7.5L17.5 16M7.5 18h9"/>',
+};

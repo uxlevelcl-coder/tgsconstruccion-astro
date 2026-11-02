@@ -1,0 +1,350 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import { ICO } from '../data/iconos';
+import { getCollection } from 'astro:content';
+
+
+const slides = [
+  { src: `/img/foto_02.webp`, alt: 'Terraza techada terminada en Santiago' },
+  { src: '/img/photo-1772567732969-c1506edf80a0-1024x683.jpeg', alt: 'Cocina remodelada con isla de mármol' },
+  { src: `/img/foto_03.webp`, alt: 'Parrilla de obra con campana' },
+  { src: `/img/Remodelacion-de-terraza-a-medida-1024x472.webp`, alt: 'Terraza a medida terminada' },
+];
+
+const processo = [
+  { t: 'Consulta inicial', d: 'Conversamos sobre su proyecto y visitamos el espacio para entender sus necesidades.' },
+  { t: 'Propuesta', d: 'Desarrollamos un diseño personalizado y un presupuesto detallado sin compromiso.' },
+  { t: 'Ejecución', d: 'Nuestro equipo realiza el trabajo con los más altos estándares de calidad.' },
+  { t: 'Entrega', d: 'Entregamos su proyecto terminado, revisado y listo para disfrutar.' },
+];
+
+const stats = [
+  { n: '+50', l: 'Proyectos entregados' },
+  { n: '24 h', l: 'Respuesta de presupuesto' },
+  { n: '100%', l: 'Garantía por escrito' },
+  { n: 'RM', l: 'Cobertura en Santiago' },
+];
+
+const obras = [
+  { src: `/img/Remodelacion-de-banos_3-scaled-e1780340637473.webp`, tag: 'Baño con vanitorio', tipo: 'foto' },
+  { src: '/img/proy_03_web.mp4', poster: '/img/proy_03_web.jpg', tag: 'Comedor y terraza', tipo: 'video' },
+  { src: `/img/Remodelacion-de-terraza-a-medida-scaled.webp`, tag: 'Terraza a medida', tipo: 'foto' },
+  { src: '/img/bano_02.mp4', poster: '/img/bano_02.jpg', tag: 'Vanitorio y espejo', tipo: 'video' },
+  { src: '/img/proy_01_final.mp4', poster: '/img/proy_01_final.jpg', tag: 'Quincho con piscina', tipo: 'video' },
+  { src: `/img/Remodelacion-de-banos_4-scaled-e1780340684543-768x1024.webp`, tag: 'Baño con ducha', tipo: 'foto' },
+  { src: '/img/proy_02_web.mp4', poster: '/img/proy_02_web.jpg', tag: 'Parrilla y mesón', tipo: 'video' },
+  { src: '/img/proy_04_web.mp4', poster: '/img/proy_04_web.jpg', tag: 'Terraza techada', tipo: 'video' },
+];
+
+const fmt = (d) => d.toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' });
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: site.empresa.nombre,
+  url: 'https://tgsconstruccion.cl/',
+  telephone: site.empresa.telefono,
+  email: site.empresa.email,
+  areaServed: ['Santiago', 'Ñuñoa', 'Providencia', 'Las Condes', 'Huechuraba'],
+  description: 'Remodelación de cocinas, baños, terrazas y quinchos en Santiago de Chile.',
+  address: { '@type': 'PostalAddress', addressLocality: 'Santiago', addressCountry: 'CL' },
+};
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: site.faq.items.map(f => ({
+    '@type': 'Question',
+    name: f.pregunta,
+    acceptedAnswer: { '@type': 'Answer', text: f.respuesta },
+  })),
+};
+---
+<Base
+  title="Remodelación de Cocinas, Baños y Terrazas en Santiago | TGS"
+  description="Remodelación de baños, cocinas, terrazas y quinchos en Santiago. Proyectos llave en mano, garantía por escrito y presupuesto sin costo en 24 horas."
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- ============ HERO ============ -->
+  <section class="hero hero--flush">
+    <div class="hero__bg" id="hslides">
+      {slides.map((s, i) => (
+        <div class={`hero__slide${i === 0 ? ' on' : ''}`}>
+          <img src={s.src} alt={s.alt} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : 'auto'} />
+        </div>
+      ))}
+    </div>
+
+    <div class="hero__copy">
+      <span class="eyebrow">{site.hero.antetitulo}</span>
+      <h1>{site.hero.titulo}</h1>
+      <p class="lead">{site.hero.bajada}</p>
+      <div class="hero__cta">
+        <a href="/contacto/" class="btn">{site.hero.boton1}</a>
+        <a href="/portafolio/" class="btn btn--ghost">{site.hero.boton2}</a>
+      </div>
+      <div class="hero__dots" id="hdots">
+        {slides.map((_, i) => <button class={i === 0 ? 'on' : ''} aria-label={`Foto ${i + 1}`} />)}
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+  <!-- ============ CIFRAS ============ -->
+  <section>
+    <div class="wrap">
+      <div class="stats reveal">
+        {stats.map(s => (
+          <div class="stat">
+            <div class="stat__n">{s.n}</div>
+            <div class="stat__l">{s.l}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMUNAS ============ -->
+  <div class="comunas" aria-hidden="true">
+    <div class="comunas__track">
+      {[...Array(2)].map(() => (
+        <div style="display:flex">
+          {[...site.empresa.comunas, 'Región Metropolitana', 'Presupuesto en 24 h', 'Proyectos llave en mano'].map(c => (
+            <span class="comunas__item">{c}</span>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="section" id="servicios">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,72px);align-items:end" class="split">
+        <div class="reveal">
+          <span class="eyebrow">Servicios</span>
+          <h2>Cuatro frentes, un mismo equipo</h2>
+        </div>
+        <div class="reveal" style="--d:90ms">
+          <p class="lead" style="max-width:46ch">
+            Baños, cocinas, terrazas y quinchos. Cada proyecto es llave en mano:
+            diseño, permisos, materiales, ejecución y terminaciones.
+          </p>
+        </div>
+      </div>
+      <div class="scards" style="margin-top:clamp(36px,4.4vw,60px)">
+        {site.servicios.items.map((s, i) => (
+          <a href={s.url} class="scard reveal" style={`--d:${i * 90}ms`}>
+            <div class="scard__media">
+              <img src={s.imagen} alt={s.titulo} loading="lazy" />
+            </div>
+            <span class="scard__cat">{s.categoria}</span>
+            <div class="scard__paste">
+              <h3>{s.titulo}</h3>
+              <p>{s.texto}</p>
+            </div>
+            <span class="scard__go" aria-hidden="true">↗</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VITRINA DE OBRAS ============ -->
+  <section class="section section--dark" style="padding-bottom:calc(var(--sec) * .8)">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,72px);align-items:end;margin-bottom:clamp(32px,4vw,52px)" class="split">
+        <div class="reveal">
+          <span class="eyebrow">{site.showcase.antetitulo}</span>
+          <h2 style="max-width:15ch">{site.showcase.titulo}</h2>
+        </div>
+        <div class="reveal" style="--d:90ms">
+          <p class="lead">{site.showcase.bajada}</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrap" style="padding-right:0">
+      <div class="show reveal">
+        {obras.map(o => (
+          <div class="show__item">
+            {o.tipo === 'video'
+              ? <video src={o.src} poster={o.poster} muted loop playsinline preload="none" tabindex="0"
+                       aria-label={`${o.tag}, video de obra entregada`}
+                       onmouseover="this.play()" onmouseout="this.pause()"
+                       onfocus="this.play()" onblur="this.pause()"></video>
+              : <img src={o.src} alt={o.tag} loading="lazy" />}
+            <span class="show__tag">{o.tag}</span>
+          </div>
+        ))}
+      </div>
+      <div class="show-nav">
+        <button id="showPrev" aria-label="Ver obras anteriores">←</button>
+        <button id="showNext" aria-label="Ver más obras">→</button>
+        <span>Obras entregadas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RAZONES ============ -->
+  <section class="section" style="background:var(--paper-2)">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,72px);align-items:end" class="split">
+        <div class="reveal">
+          <span class="eyebrow">{site.razones.antetitulo}</span>
+          <h2 style="max-width:14ch">{site.razones.titulo}</h2>
+        </div>
+        <div class="reveal" style="--d:90ms">
+          <p class="lead">{site.razones.bajada}</p>
+        </div>
+      </div>
+      <div style="margin-top:clamp(36px,4.4vw,60px)" class="grid-proc grid-proc--2">
+        {site.razones.items.map((r, i) => (
+          <div class="proc reveal" style={`--d:${i * 70}ms`}>
+            <span class="proc__ico">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                   stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true" set:html={ICO[(r as any).ico ?? 'integral']} />
+            </span>
+            <h3>{r.titulo}</h3>
+            <p>{r.texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESO ============ -->
+  <section class="section section--dark">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,72px);align-items:end" class="split">
+        <div class="reveal">
+          <span class="eyebrow">Proceso</span>
+          <h2>Simple y transparente</h2>
+        </div>
+        <div class="reveal" style="--d:90ms">
+          <p class="lead">Cuatro etapas claras, desde la primera visita hasta la entrega de la obra.</p>
+        </div>
+      </div>
+      <div class="grid-proc" style="margin-top:clamp(40px,5vw,72px)">
+        {processo.map((p, i) => (
+          <div class="proc reveal" style={`--d:${i * 80}ms`}>
+            <div class="proc__n">0{i + 1}</div>
+            <h3>{p.t}</h3>
+            <p>{p.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIOS ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Testimonios</span>
+        <h2 style="max-width:20ch">{site.testimonios.titulo}</h2>
+        <p class="lead">{site.testimonios.bajada}</p>
+      </div>
+      <div class="grid-test">
+        {site.testimonios.items.map((t, i) => (
+          <div class="test reveal" style={`--d:${i * 90}ms`}>
+            <div class="test__q" aria-hidden="true">“</div>
+            <p class="test__txt">{t.texto}</p>
+            <div class="test__who">
+              <div class="test__av">{t.nombre.charAt(0)}</div>
+              <div>
+                <div class="test__name">{t.nombre}</div>
+                <div class="test__meta">{t.origen}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,4vw,72px);align-items:start" class="split">
+        <div class="reveal">
+          <span class="eyebrow">{site.faq.antetitulo}</span>
+          <h2 style="max-width:12ch">{site.faq.titulo}</h2>
+        </div>
+        <div class="faq reveal" style="--d:90ms;max-width:none;width:100%">
+          {site.faq.items.map(f => (
+            <details>
+              <summary>{f.pregunta}</summary>
+              <p>{f.respuesta}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,4vw,72px);align-items:end" class="split">
+        <div class="reveal">
+          <span class="eyebrow">Siguiente paso</span>
+          <h2>{site.cta.titulo}</h2>
+        </div>
+        <div class="reveal" style="--d:90ms">
+          <p>{site.cta.bajada}</p>
+          <div class="cta__btns" style="margin-top:26px">
+            <a href={`https://wa.me/${site.empresa.whatsapp}?text=${encodeURIComponent('Hola, quiero un presupuesto de remodelación.')}`} class="btn">{site.cta.boton1}</a>
+            <a href="/contacto/" class="btn btn--ghost">{site.cta.boton2}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @media(max-width:900px){ .split{grid-template-columns:minmax(0,1fr) !important;align-items:start !important} }
+    @media(max-width:760px){ .split2{grid-template-columns:minmax(0,1fr) !important} }
+  </style>
+
+  <script slot="scripts">
+    (() => {
+      const slides = [...document.querySelectorAll('#hslides .hero__slide')];
+      const dots = [...document.querySelectorAll('#hdots button')];
+      if (slides.length > 1) {
+        let i = 0, t;
+        const go = (x) => {
+          i = (x + slides.length) % slides.length;
+          slides.forEach((s, k) => s.classList.toggle('on', k === i));
+          dots.forEach((d, k) => d.classList.toggle('on', k === i));
+        };
+        const auto = () => { clearInterval(t); t = setInterval(() => go(i + 1), 6500); };
+        dots.forEach((d, k) => d.addEventListener('click', () => { go(k); auto(); }));
+        auto();
+      }
+    
+      // flechas de la vitrina de obras
+      const show = document.querySelector('.show');
+      const prev = document.getElementById('showPrev');
+      const next = document.getElementById('showNext');
+      if (show && prev && next) {
+        const paso = () => {
+          const item = show.querySelector('.show__item');
+          return item ? item.getBoundingClientRect().width + 16 : 300;
+        };
+        const sync = () => {
+          prev.disabled = show.scrollLeft <= 4;
+          next.disabled = show.scrollLeft + show.clientWidth >= show.scrollWidth - 4;
+        };
+        prev.addEventListener('click', () => show.scrollBy({ left: -paso(), behavior: 'smooth' }));
+        next.addEventListener('click', () => show.scrollBy({ left: paso(), behavior: 'smooth' }));
+        show.addEventListener('scroll', sync, { passive: true });
+        window.addEventListener('resize', sync);
+        sync();
+      }
+    })();
+  </script>
+</Base>

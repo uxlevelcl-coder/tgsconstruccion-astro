@@ -1,0 +1,113 @@
+media:
+  input: public/img
+  output: /img
+  extensions: [jpg, jpeg, png, webp, avif, svg]
+
+content:
+  - name: blog
+    label: Artículos del blog
+    type: collection
+    path: src/content/posts
+    filename:
+      template: "{slug}.md"
+    view:
+      fields: [title, date]
+      sort: [date, desc]
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: description
+        label: Bajada (para Google, máx. 155 caracteres)
+        type: text
+        required: true
+      - name: date
+        label: Fecha
+        type: date
+        required: true
+      - name: body
+        label: Contenido
+        type: rich-text
+
+  - name: sitio
+    label: Textos del sitio
+    type: file
+    path: src/data/site.json
+    fields:
+      - name: empresa
+        label: Datos de la empresa
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: bajada, label: Bajada del logo, type: string }
+          - { name: telefono, label: Teléfono (como se muestra), type: string }
+          - { name: whatsapp, label: WhatsApp (solo números, con 56), type: string }
+          - { name: zonas, label: Zonas que atiende, type: string }
+          - { name: horario, label: Horario, type: string }
+
+      - name: hero
+        label: Portada (hero)
+        type: object
+        fields:
+          - { name: antetitulo, label: Antetítulo, type: string }
+          - { name: titulo, label: Título principal (H1), type: string }
+          - { name: bajada, label: Texto bajo el título, type: text }
+          - { name: boton1, label: Botón principal, type: string }
+          - { name: boton2, label: Botón secundario, type: string }
+
+      - name: servicios
+        label: Servicios
+        type: object
+        fields:
+          - { name: antetitulo, label: Antetítulo, type: string }
+          - { name: titulo, label: Título, type: string }
+          - { name: bajada, label: Bajada, type: text }
+          - name: items
+            label: Tarjetas de servicio
+            type: object
+            list: true
+            fields:
+              - { name: titulo, label: Nombre, type: string }
+              - { name: texto, label: Descripción, type: text }
+              - { name: url, label: Enlace, type: string }
+              - { name: imagen, label: Imagen (URL), type: string }
+
+      - name: testimonios
+        label: Testimonios
+        type: object
+        fields:
+          - { name: antetitulo, label: Antetítulo, type: string }
+          - { name: titulo, label: Título, type: string }
+          - { name: bajada, label: Bajada, type: text }
+          - name: items
+            label: Reseñas
+            type: object
+            list: true
+            fields:
+              - { name: texto, label: Texto de la reseña, type: text }
+              - { name: nombre, label: Nombre del cliente, type: string }
+              - { name: origen, label: Origen (ej. Reseña en Google), type: string }
+
+      - name: faq
+        label: Preguntas frecuentes
+        type: object
+        fields:
+          - { name: antetitulo, label: Antetítulo, type: string }
+          - { name: titulo, label: Título, type: string }
+          - name: items
+            label: Preguntas
+            type: object
+            list: true
+            fields:
+              - { name: pregunta, label: Pregunta, type: string }
+              - { name: respuesta, label: Respuesta, type: text }
+
+      - name: cta
+        label: Bloque final (llamado a la acción)
+        type: object
+        fields:
+          - { name: titulo, label: Título, type: string }
+          - { name: bajada, label: Bajada, type: text }
+          - { name: boton1, label: Botón 1, type: string }
+          - { name: boton2, label: Botón 2, type: string }

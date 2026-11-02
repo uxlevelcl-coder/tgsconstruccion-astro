@@ -1,0 +1,166 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import PageHero from './PageHero.astro';
+import { ICO } from '../data/iconos';
+interface Tipo { t: string; d: string; ico?: string }
+interface Props {
+  title: string;
+  description: string;
+  eyebrow: string;
+  h1: string;
+  lead: string;
+  img: string;
+  h2tipos: string;
+  tipos: Tipo[];
+  faq: { q: string; a: string }[];
+  galeria?: { src: string; alt: string }[];
+  intro?: { h2: string; parrafos: string[]; items: string[]; chip: string; img?: string; video?: string; poster?: string };
+}
+const { title, description, eyebrow, h1, lead, img, h2tipos, tipos, faq, galeria = [], intro } = Astro.props;
+const introImg = intro?.img ?? galeria[0]?.src;
+const introAlt = galeria[0]?.alt ?? intro?.h2 ?? '';
+---
+<Base title={title} description={description}>
+  <PageHero
+    antetitulo={eyebrow}
+    titulo={h1}
+    bajada={lead}
+    imagen={img}
+    alto="md"
+  >
+    <div class="hero__cta">
+      <a href="/contacto/" class="btn">Presupuesto sin costo</a>
+      <a href={`https://wa.me/${site.empresa.whatsapp}`} class="btn btn--ghost">WhatsApp</a>
+    </div>
+  </PageHero>
+
+  {intro && (
+    <section class="section">
+      <div class="wrap intro2">
+        <div class="intro2__txt">
+          <h2>{intro.h2}</h2>
+          {intro.parrafos.map(p => <p>{p}</p>)}
+          <ul class="checks">
+            {intro.items.map(i => (
+              <li>
+                <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>{i}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <figure class="intro2__img">
+          <span class="chip">{intro.chip}</span>
+          {intro.video
+            ? <video src={intro.video} poster={intro.poster} muted loop playsinline preload="none" data-introvideo aria-label={introAlt}></video>
+            : introImg && <img src={introImg} alt={introAlt} loading="lazy" />}
+        </figure>
+      </div>
+    </section>
+  )}
+  {galeria.length > 0 && (
+    <section class="section section--obras" style="background:var(--paper-2)">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="eyebrow">Obras</span>
+          <h2>Proyectos que hemos entregado</h2>
+        </div>
+        <div class="gal">
+          {galeria.map(g => (
+            <figure class="gal__i">
+              <img src={g.src} alt={g.alt} loading="lazy" />
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Opciones</span>
+        <h2>{h2tipos}</h2>
+      </div>
+      <div class="grid-serv">
+        {tipos.map((t, i) => (
+          <div class="serv" style="padding:26px">
+            <span class="serv__ico">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor"
+                   stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true" set:html={ICO[t.ico ?? 'integral']} />
+            </span>
+            <h3 style="margin:8px 0 8px">{t.t}</h3>
+            <p style="color:var(--ink-soft);font-size:15px;margin:0">{t.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Nuestro proceso</span>
+        <h2>Cómo trabajamos</h2>
+      </div>
+      <div class="grid-proc">
+        {[
+          { t: 'Consulta y visita', d: 'Vamos a la propiedad, medimos y conversamos sobre lo que necesita.' },
+          { t: 'Diseño y propuesta', d: 'Entregamos un diseño y un presupuesto detallado, sin costo.' },
+          { t: 'Ejecución', d: 'Un solo equipo coordinando gasfitería, electricidad y terminaciones.' },
+          { t: 'Entrega con garantía', d: 'Revisamos con usted y entregamos garantía por escrito.' },
+        ].map((p, i) => (
+          <div class="proc">
+            <div class="proc__n">0{i + 1}</div>
+            <h3>{p.t}</h3>
+            <p>{p.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Lo que más nos preguntan</h2>
+      </div>
+      <div class="faq">
+        {faq.map(f => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Presupuesto sin costo en 24 horas</h2>
+      <p>Visitamos su propiedad, medimos y le entregamos un presupuesto detallado.</p>
+      <div class="cta__btns">
+        <a href={`https://wa.me/${site.empresa.whatsapp}`} class="btn btn--dark">Escribir por WhatsApp</a>
+        <a href="/contacto/" class="btn" style="background:#fff">Pedir presupuesto</a>
+      </div>
+    </div>
+  </section>
+  <script>
+    const vids = document.querySelectorAll('video[data-introvideo]');
+    if (vids.length && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((es) => {
+        es.forEach(e => {
+          const v = e.target;
+          if (e.isIntersecting) { v.play().catch(() => {}); } else { v.pause(); }
+        });
+      }, { threshold: 0.35 });
+      vids.forEach(v => io.observe(v));
+    }
+  </script>
+</Base>

@@ -1,0 +1,46 @@
+---
+import ServiceLanding from '../components/ServiceLanding.astro';
+---
+<ServiceLanding
+  title="Construcción de Terrazas en Santiago | TGS Construcción"
+  description="Construcción de terrazas techadas y descubiertas en Santiago. Diseño, permisos, estructura e instalaciones. Presupuesto sin costo en 24 horas."
+  eyebrow="Construcción de terrazas"
+  h1="Construcción de terrazas en Santiago"
+  lead="Espacios exteriores que extienden su casa hacia el aire libre. Diseñamos, tramitamos los permisos y construimos con materiales de primera calidad."
+  img="/img/Remodelacion-de-terraza-a-medida-scaled.webp"
+  h2tipos="Tipos de terraza que construimos"
+  tipos={[
+    { t: 'Terraza techada', ico: 'techo', d: 'Con cubierta y estructura propia: se usa todo el año, con sombra y protección de la lluvia.' },
+    { t: 'Terraza descubierta', ico: 'sol', d: 'La opción más económica: piso, baranda y terminaciones para ganar metros exteriores.' },
+    { t: 'Deck y pérgola', ico: 'deck', d: 'Madera o composite con pérgola de listones: cálido, liviano y rápido de instalar.' },
+  ]}
+  faq={[
+    { q: '¿Cuánto demora construir una terraza?', a: 'Una terraza descubierta toma entre 2 y 3 semanas. Con cubierta y permisos, entre 4 y 6 semanas.' },
+    { q: '¿Necesito permiso municipal?', a: 'Si la terraza es techada y supera cierto metraje, sí. Nosotros gestionamos el permiso en la municipalidad correspondiente.' },
+    { q: '¿Qué materiales usan?', a: 'Estructura de madera tratada o metalcon según el caso, cubiertas de policarbonato, teja o zinc, y pisos de porcelanato, deck o cerámica.' },
+    { q: '¿Ofrecen garantía?', a: 'Sí, con garantía por escrito sobre estructura e instalaciones.' },
+  ]}
+  intro={{
+    h2: 'Amplía tu espacio de vida',
+    parrafos: [
+      'Una terraza bien diseñada no solo aumenta el valor de tu propiedad, sino que crea un espacio invaluable para disfrutar el aire libre, compartir con familia y amigos, y conectar con la naturaleza desde la comodidad de tu hogar.',
+      'Nuestro equipo especializado en construcción de terrazas combina diseño arquitectónico, ingeniería estructural y materiales de primera calidad para crear espacios exteriores duraderos y estéticamente impecables.',
+    ],
+    items: [
+      'Diseño arquitectónico personalizado',
+      'Materiales resistentes a la intemperie',
+      'Deck de madera, composite o porcelanato',
+      'Pérgolas y techumbres modernas',
+      'Iluminación LED exterior',
+      'Sistemas de drenaje eficientes',
+    ],
+    video: '/img/proy_04_web.mp4',
+    poster: '/img/proy_04_web.jpg',
+    chip: 'Terrazas',
+  }}
+  galeria={[
+    { src: "/img/Remodelacion-de-terraza-a-medida-scaled.webp", alt: "Proyecto de construccion de terrazas" },
+    { src: "/img/Terraza_1.webp", alt: "Proyecto de construccion de terrazas" },
+    { src: "/img/remodelacion-de-terrazas.jpg", alt: "Proyecto de construccion de terrazas" },
+  ]}
+/>

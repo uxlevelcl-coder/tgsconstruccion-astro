@@ -1,0 +1,111 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import PageHero from '../components/PageHero.astro';
+
+const proyectos = [
+  {
+    titulo: 'Quincho con terraza y piscina',
+    lugar: 'Santiago',
+    detalle: 'Quincho con parrilla de obra, campana, mesón de granito y terraza techada con piscina.',
+    medios: [
+      { tipo: 'foto', src: '/img/foto_04-scaled.webp', alt: 'Quincho con piscina terminado' },
+      { tipo: 'foto', src: `/img/foto_02.webp`, alt: 'Terraza techada terminada' },
+      { tipo: 'foto', src: `/img/foto_03.webp`, alt: 'Parrilla de obra con campana' },
+      { tipo: 'video', src: '/img/proy_01_final.mp4', poster: '/img/proy_01_final.jpg' },
+      { tipo: 'video', src: '/img/proy_02_web.mp4', poster: '/img/proy_02_web.jpg' },
+      { tipo: 'video', src: '/img/proy_03_web.mp4', poster: '/img/proy_03_web.jpg' },
+      { tipo: 'video', src: '/img/proy_04_web.mp4', poster: '/img/proy_04_web.jpg' },
+    ],
+  },
+  {
+    titulo: 'Baño con vanitorio y espejo redondo',
+    lugar: 'Santiago',
+    detalle: 'Cambio de tina por ducha, vanitorio de madera, espejo redondo y cerámica nueva.',
+    medios: [
+      { tipo: 'foto', src: '/img/Remodelacion-de-banos_3-scaled-e1780340637473.webp', alt: 'Baño con vanitorio terminado' },
+      { tipo: 'video', src: '/img/bano_02.mp4', poster: '/img/bano_02.jpg' },
+      { tipo: 'video', src: '/img/bano_03.mp4', poster: '/img/bano_03.jpg' },
+    ],
+  },
+  {
+    titulo: 'Baño con ducha y espejo LED',
+    lugar: 'Santiago',
+    detalle: 'Ducha a piso, mampara de vidrio templado, espejo con luz LED y guardado bajo el vanitorio.',
+    medios: [
+      { tipo: 'foto', src: '/img/Remodelacion-de-banos_4-scaled-e1780340684543-768x1024.webp', alt: 'Baño con ducha terminado' },
+      { tipo: 'video', src: '/img/bano_04.mp4', poster: '/img/bano_04.jpg' },
+      { tipo: 'video', src: '/img/proy_05_web.mp4', poster: '/img/proy_05_web.jpg' },
+    ],
+  },
+];
+---
+<Base
+  title="Proyectos de Remodelación en Santiago | TGS Construcción"
+  description="Quinchos, terrazas, baños y cocinas terminados. Fotos y videos de proyectos reales de remodelación en Santiago. Presupuesto sin costo en 24 h."
+>
+  <PageHero
+    antetitulo="Portafolio"
+    titulo="Proyectos de remodelación en Santiago"
+    bajada="Obras terminadas, con fotos y videos del resultado final. Sin renders ni imágenes de catálogo."
+    imagen="/img/foto_03.webp"
+    alto="sm"
+  />
+
+  <section class="section">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:56px">
+      {proyectos.map((p, idx) => (
+        <article>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px">
+            <h2 style="margin:0">{p.titulo}</h2>
+            <span style="font-size:13px;color:var(--ink-light);letter-spacing:.06em;text-transform:uppercase">{p.lugar}</span>
+          </div>
+          <p style="color:var(--ink-soft);font-size:var(--fs-m);max-width:70ch;margin-bottom:24px">{p.detalle}</p>
+
+          <div class="pf-grid">
+            {p.medios.map(m => (
+              m.tipo === 'video' ? (
+                <div class="pf-tile">
+                  <video class="pf-media" src={m.src} poster={m.poster} muted loop playsinline preload="none" tabindex="0"
+                         aria-label={`${m.alt ?? 'Obra entregada'}, video`}
+                         onmouseover="this.play()" onmouseout="this.pause()"
+                         onfocus="this.play()" onblur="this.pause()"></video>
+                  <span class="pf-badge">▶ video</span>
+                </div>
+              ) : (
+                <div class="pf-tile">
+                  <img class="pf-media" src={m.src} alt={m.alt} loading="lazy" />
+                </div>
+              )
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>¿Quiere un resultado así?</h2>
+      <p>Visitamos su propiedad sin costo y le entregamos un presupuesto detallado en 24 horas.</p>
+      <div class="cta__btns">
+        <a href={`https://wa.me/${site.empresa.whatsapp}`} class="btn btn--dark">Escribir por WhatsApp</a>
+        <a href="/contacto/" class="btn" style="background:#fff">Pedir presupuesto</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .pf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .pf-tile{position:relative}
+    .pf-badge{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.62);color:#fff;
+      font-size:11px;font-weight:500;letter-spacing:.04em;padding:5px 10px;border-radius:var(--r-sm);
+      pointer-events:none}
+    .pf-media{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-md);
+      box-shadow:0 6px 18px -6px rgba(0,0,0,.12);transition:transform .35s ease,box-shadow .35s ease;
+      background:var(--soft)}
+    .pf-media:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 14px 28px -8px rgba(0,0,0,.24)}
+    @media(max-width:900px){.pf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.pf-grid{grid-template-columns:minmax(0,1fr)}}
+  </style>
+</Base>

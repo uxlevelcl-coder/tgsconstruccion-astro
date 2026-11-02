@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import PageHero from '../../components/PageHero.astro';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const fmt = (d) => d.toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base
+  title="Blog de remodelación | TGS Construcción"
+  description="Guías y precios reales de remodelación de baños, cocinas, terrazas y quinchos en Santiago de Chile."
+>
+  <PageHero
+    antetitulo="Blog"
+    titulo="Guías y precios de remodelación"
+    bajada="Lo que conviene saber antes de remodelar: cuánto cuesta, qué permisos se necesitan y cómo elegir a quién contrata."
+    alto="sm"
+  />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="posts">
+        {posts.map(p => (
+          <a href={`/blog/${p.id}/`} class="post-card">
+            {p.data.image && (
+              <div class="post-card__img"><img src={p.data.image} alt={p.data.title} loading="lazy" /></div>
+            )}
+            <div class="post-card__body">
+              <span class="post-card__date">{fmt(p.data.date)}</span>
+              <h2>{p.data.title}</h2>
+              <p>{p.data.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

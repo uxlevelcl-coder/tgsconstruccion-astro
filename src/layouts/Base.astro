@@ -1,0 +1,56 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+}
+const { title, description, canonical, image } = Astro.props;
+const url = canonical ?? new URL(Astro.url.pathname, Astro.site);
+const ogImage = image ?? '/img/foto_04-scaled.webp';
+---
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={url} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TGS Construcción" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content="es_CL" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#f0842c" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <slot name="head" />
+</head>
+<body>
+  <Header />
+  <main><slot /></main>
+  <Footer />
+  <script>
+    (() => {
+      const items = document.querySelectorAll('.reveal');
+      if (!items.length) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        items.forEach(el => el.classList.add('in')); return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+      items.forEach(el => io.observe(el));
+    })();
+  </script>
+  <slot name="scripts" />
+</body>
+</html>

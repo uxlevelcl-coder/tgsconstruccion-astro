@@ -1,0 +1,200 @@
+{
+  "empresa": {
+    "nombre": "TGS Construcción",
+    "bajada": "Remodelación y construcción en Santiago",
+    "telefono": "+56 9 4627 9208",
+    "whatsapp": "56946279208",
+    "zonas": "Ñuñoa, Providencia, Las Condes, Huechuraba y toda la Región Metropolitana",
+    "horario": "Lunes a viernes, 9:00 a 18:00",
+    "email": "contacto@tgsconstruccion.cl",
+    "comunas": [
+      "Ñuñoa",
+      "Providencia",
+      "Santiago",
+      "Las Condes",
+      "Huechuraba"
+    ]
+  },
+  "hero": {
+    "antetitulo": "Remodelaciones en Santiago",
+    "titulo": "Remodelación de baños, cocinas y terrazas",
+    "bajada": "Remodelaciones de baños, cocinas, quinchos y terrazas en todo Santiago. Diseño moderno, materiales de primera y entrega garantizada por escrito.",
+    "boton1": "Presupuesto sin costo en 24 h",
+    "boton2": "Ver proyectos",
+    "acento": "baños, cocinas"
+  },
+  "servicios": {
+    "antetitulo": "Nuestros servicios",
+    "titulo": "Especialistas en remodelación y construcción",
+    "bajada": "Un enfoque en calidad y diseño contemporáneo, con un solo responsable de principio a fin.",
+    "items": [
+      {
+        "titulo": "Remodelación de baños",
+        "texto": "Diseños modernos y funcionales que transforman tu baño en un espacio de confort premium.",
+        "url": "/remodelacion-de-banos/",
+        "imagen": "/img/bano-768x1024.webp",
+        "categoria": "Baños"
+      },
+      {
+        "titulo": "Remodelación de cocinas",
+        "texto": "Cocinas contemporáneas diseñadas para la vida moderna con los mejores materiales.",
+        "url": "/remodelacion-cocinas/",
+        "imagen": "/img/photo-1772567732969-c1506edf80a0-1024x683.jpeg",
+        "categoria": "Cocinas"
+      },
+      {
+        "titulo": "Construcción de terrazas",
+        "texto": "Terrazas techadas y descubiertas que amplían tu espacio de vida hacia el exterior.",
+        "url": "/construccion-de-terrazas/",
+        "imagen": "/img/Remodelacion-de-terraza-a-medida-scaled.webp",
+        "categoria": "Terrazas"
+      },
+      {
+        "titulo": "Construcción de quinchos",
+        "texto": "Quinchos a medida con parrilla, campana y mesón, pensados para reunirse.",
+        "url": "/construccion-quinchos/",
+        "imagen": "/img/quincho-768x1024.webp",
+        "categoria": "Quinchos"
+      }
+    ]
+  },
+  "razones": {
+    "antetitulo": "Por qué elegir TGS",
+    "titulo": "Un solo responsable para todo el proyecto",
+    "bajada": "Coordinamos gasfitería, electricidad, cerámica, muebles y pintura para que no tengas que hablar con cinco maestros distintos.",
+    "items": [
+      {
+        "titulo": "Proyectos llave en mano",
+        "texto": "Nos hacemos cargo del diseño, la compra de materiales, la ejecución y las terminaciones.",
+        "ico": "llave"
+      },
+      {
+        "titulo": "Garantía por escrito",
+        "texto": "Todos los trabajos quedan con garantía respaldada en el contrato, no de palabra.",
+        "ico": "escudo"
+      },
+      {
+        "titulo": "Presupuesto sin costo",
+        "texto": "Visitamos la propiedad, medimos y entregamos un presupuesto detallado en 24 horas.",
+        "ico": "reloj"
+      },
+      {
+        "titulo": "Coordinación completa",
+        "texto": "Un solo responsable para gasfitería, electricidad, cerámica, muebles y pintura.",
+        "ico": "red"
+      }
+    ]
+  },
+  "testimonios": {
+    "antetitulo": "Testimonios",
+    "titulo": "Lo que dicen nuestros clientes",
+    "bajada": "La satisfacción de nuestros clientes es nuestra mejor carta de presentación.",
+    "items": [
+      {
+        "texto": "Destaco la responsabilidad y la prolijidad de los trabajos realizados.",
+        "nombre": "Pía Núñez Montecinos",
+        "origen": "Reseña en Google"
+      },
+      {
+        "texto": "Excelente experiencia, hicimos logia y cocina y quedamos muy contentos.",
+        "nombre": "Hugo Rojas",
+        "origen": "Reseña en Google"
+      },
+      {
+        "texto": "Muy buen trabajo.",
+        "nombre": "Jessica Sarmiento",
+        "origen": "Reseña en Google"
+      }
+    ]
+  },
+  "faq": {
+    "antetitulo": "Preguntas frecuentes",
+    "titulo": "Lo que más nos preguntan",
+    "items": [
+      {
+        "pregunta": "¿Qué servicios de remodelación ofrecen en TGS Construcción?",
+        "respuesta": "Remodelación de cocinas, baños, terrazas, quinchos y obras menores. Todos los proyectos son llave en mano: diseño, demolición, instalaciones y terminaciones."
+      },
+      {
+        "pregunta": "¿Cuánto cuesta una remodelación?",
+        "respuesta": "El costo varía según el tamaño, los materiales y la complejidad de cada proyecto. Entregamos un presupuesto detallado y sin costo después de visitar la propiedad."
+      },
+      {
+        "pregunta": "¿En qué zonas de Santiago trabajan?",
+        "respuesta": "Trabajamos en todo Santiago: Ñuñoa, Providencia, Las Condes, Huechuraba y toda la Región Metropolitana. Visitamos tu propiedad sin costo."
+      },
+      {
+        "pregunta": "¿Ofrecen garantía en las remodelaciones?",
+        "respuesta": "Sí, todos nuestros proyectos incluyen garantía por escrito. Usamos materiales de primera calidad y contamos con un equipo de profesionales."
+      }
+    ]
+  },
+  "cta": {
+    "titulo": "Su presupuesto, en 24 horas",
+    "bajada": "Visitamos su propiedad sin costo, medimos y le entregamos el detalle por escrito. Sin compromiso.",
+    "boton1": "Escribir por WhatsApp",
+    "boton2": "Pedir presupuesto"
+  },
+  "nav": [
+    {
+      "label": "Servicios",
+      "url": "/#servicios",
+      "sub": [
+        {
+          "label": "Remodelación de baños",
+          "url": "/remodelacion-de-banos/"
+        },
+        {
+          "label": "Remodelación de cocinas",
+          "url": "/remodelacion-cocinas/"
+        },
+        {
+          "label": "Construcción de terrazas",
+          "url": "/construccion-de-terrazas/"
+        },
+        {
+          "label": "Construcción de quinchos",
+          "url": "/construccion-quinchos/"
+        }
+      ]
+    },
+    {
+      "label": "Portafolio",
+      "url": "/portafolio/"
+    },
+    {
+      "label": "Nosotros",
+      "url": "/nosotros/"
+    }
+  ],
+  "showcase": {
+    "antetitulo": "Obras terminadas",
+    "titulo": "Mira cómo transformamos cada espacio",
+    "bajada": "Sin renders ni imágenes de catálogo: solo obra entregada, grabada en la casa del cliente."
+  },
+  "footer": {
+    "texto": "Transformamos espacios en experiencias modernas y funcionales en Santiago, Chile.",
+    "servicios": [
+      {
+        "label": "Remodelación de baños",
+        "url": "/remodelacion-de-banos/"
+      },
+      {
+        "label": "Remodelación de cocinas",
+        "url": "/remodelacion-cocinas/"
+      },
+      {
+        "label": "Construcción de terrazas",
+        "url": "/construccion-de-terrazas/"
+      },
+      {
+        "label": "Construcción de quinchos",
+        "url": "/construccion-quinchos/"
+      },
+      {
+        "label": "Portafolio",
+        "url": "/portafolio/"
+      }
+    ]
+  }
+}

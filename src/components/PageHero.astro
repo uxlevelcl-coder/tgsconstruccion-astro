@@ -1,0 +1,23 @@
+---
+interface Props {
+  antetitulo?: string;
+  titulo: string;
+  bajada?: string;
+  imagen?: string;
+  alto?: 'sm' | 'md' | 'lg';
+}
+const { antetitulo, titulo, bajada, imagen, alto = 'md' } = Astro.props;
+---
+<section class:list={['hero', 'hero--flush', 'hero--page', `hero--${alto}`, !imagen && 'hero--dark']}>
+  {imagen && (
+    <div class="hero__bg">
+      <div class="hero__slide on"><img src={imagen} alt={titulo} /></div>
+    </div>
+  )}
+  <div class="hero__copy">
+    {antetitulo && <span class="eyebrow">{antetitulo}</span>}
+    <h1>{titulo}</h1>
+    {bajada && <p class="lead">{bajada}</p>}
+    <slot />
+  </div>
+</section>

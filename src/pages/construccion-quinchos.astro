@@ -1,0 +1,46 @@
+---
+import ServiceLanding from '../components/ServiceLanding.astro';
+---
+<ServiceLanding
+  title="Construcción de Quinchos en Santiago | TGS Construcción"
+  description="Construcción de quinchos a medida en Santiago: parrilla, campana, mesón y pérgola. Proyecto llave en mano y presupuesto sin costo en 24 horas."
+  eyebrow="Construcción de quinchos"
+  h1="Construcción de quinchos en Santiago"
+  lead="El lugar donde se juntan los domingos. Diseñamos y construimos quinchos que se adaptan a su terreno, su presupuesto y su forma de recibir."
+  img="/img/construccion-de-quinchos-a-medida-scaled.webp"
+  h2tipos="Tipos de quincho que construimos"
+  tipos={[
+    { t: 'Quincho cerrado', ico: 'casa', d: 'Con muros y ventanales: se usa todo el año y no depende del clima.' },
+    { t: 'Quincho abierto con pérgola', ico: 'pergola', d: 'Estructura y cubierta con lados abiertos: la opción más usada para asados.' },
+    { t: 'Parrilla, campana y mesón', ico: 'parrilla', d: 'Equipamiento de obra: parrilla de ladrillo, campana extractora y mesón de granito.' },
+  ]}
+  faq={[
+    { q: '¿Cuánto demora construir un quincho?', a: 'Entre 4 y 8 semanas según tamaño, cubierta e instalaciones.' },
+    { q: '¿Se necesitan permisos municipales?', a: 'Cuando el quincho es una obra con estructura y cubierta, normalmente sí. Nos encargamos del trámite.' },
+    { q: '¿Incluye parrilla y campana?', a: 'Sí, el equipamiento de obra es parte del proyecto: parrilla, campana, mesón y las instalaciones de gas y agua.' },
+    { q: '¿Trabajan en toda la Región Metropolitana?', a: 'Sí: Ñuñoa, Providencia, Las Condes, Huechuraba y comunas de la Región Metropolitana.' },
+  ]}
+  intro={{
+    h2: 'Quinchos a medida en Santiago',
+    parrafos: [
+      'En TGS Construcción diseñamos y construimos quinchos que se adaptan a tu terreno, tu presupuesto y tu estilo de vida. Trabajamos en Ñuñoa, Providencia, Las Condes, Huechuraba y todo Santiago.',
+      'Cada proyecto incluye diseño personalizado, materiales de primera calidad y un equipo que te acompaña desde la idea inicial hasta la entrega final. Sin sorpresas, sin costos ocultos.',
+    ],
+    items: [
+      'Diseño arquitectónico funcional y estético',
+      'Parrillas de acero inoxidable o ladrillo',
+      'Techumbres resistentes al clima',
+      'Áreas de cocina y preparación',
+      'Iluminación ambiental y funcional',
+      'Mobiliario integrado y almacenamiento',
+    ],
+    video: '/img/proy_01_final.mp4',
+    poster: '/img/proy_01_final.jpg',
+    chip: 'Quinchos',
+  }}
+  galeria={[
+    { src: "/img/construccion-de-quinchos-a-medida-scaled.webp", alt: "Proyecto de construccion quinchos" },
+    { src: "/img/quincho-768x1024.webp", alt: "Proyecto de construccion quinchos" },
+    { src: "/img/foto_02.webp", alt: "Proyecto de construccion quinchos" },
+  ]}
+/>

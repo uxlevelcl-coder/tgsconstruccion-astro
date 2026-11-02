@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import PageHero from '../components/PageHero.astro';
+---
+<Base
+  title="Contacto | Presupuesto sin costo en 24 h | TGS Construcción"
+  description="Pida su presupuesto de remodelación en Santiago. Visitamos la propiedad sin costo y respondemos en 24 horas."
+>
+  <PageHero
+    antetitulo="Contacto"
+    titulo="Pida su presupuesto sin costo"
+    bajada="Visitamos su propiedad sin costo y le entregamos el detalle por escrito en 24 horas hábiles. Si prefiere, escríbanos directamente por WhatsApp."
+    alto="sm"
+  />
+
+  <section class="section section--soft">
+    <div class="wrap" style="max-width:1000px">
+      <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:32px;margin-top:36px" class="ct-grid">
+        <form id="ctform" data-wa={site.empresa.whatsapp} style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:16px">
+          <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">
+            Nombre
+            <input name="nombre" required placeholder="Su nombre" style="padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-sm);font:inherit" />
+          </label>
+          <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">
+            Comuna
+            <input name="comuna" placeholder="Ej: Ñuñoa" style="padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-sm);font:inherit" />
+          </label>
+          <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">
+            ¿Qué necesita?
+            <select name="servicio" style="padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-sm);font:inherit">
+              <option>Remodelación de baño</option>
+              <option>Remodelación de cocina</option>
+              <option>Terraza o quincho</option>
+              <option>Otra obra</option>
+            </select>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">
+            Cuéntenos del proyecto
+            <textarea name="detalle" rows="4" placeholder="Ej: baño de 4 m², cambiar tina por ducha" style="padding:12px 14px;border:1px solid var(--line);border-radius:var(--r-sm);font:inherit;resize:vertical"></textarea>
+          </label>
+          <button type="submit" class="btn" style="width:100%">Enviar por WhatsApp</button>
+          <p style="font-size:12px;color:var(--ink-light);margin:0">
+            Al enviar se abrirá WhatsApp con el mensaje ya escrito. No compartimos sus datos.
+          </p>
+        </form>
+
+        <aside style="display:flex;flex-direction:column;gap:18px">
+          <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px">
+            <h2 style="font-size:17px;margin-bottom:8px">WhatsApp</h2>
+            <a href={`https://wa.me/${site.empresa.whatsapp}`} style="color:var(--gold-deep);font-weight:500;display:inline-flex;align-items:center;min-height:44px">{site.empresa.telefono}</a>
+          </div>
+          <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px">
+            <h2 style="font-size:17px;margin-bottom:8px">Zonas que atendemos</h2>
+            <p style="font-size:14px;color:var(--ink-soft);margin:0">
+              Ñuñoa, Providencia, Las Condes, Huechuraba y toda la Región Metropolitana.
+            </p>
+          </div>
+          <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px">
+            <h2 style="font-size:17px;margin-bottom:8px">Horario</h2>
+            <p style="font-size:14px;color:var(--ink-soft);margin:0">Lunes a viernes, 9:00 a 18:00.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @media (max-width: 820px) { .ct-grid { grid-template-columns: minmax(0,1fr) !important; } }
+  </style>
+
+  <script slot="scripts">
+    document.getElementById('ctform').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const f = e.target;
+      const wa = f.dataset.wa;
+      const msg =
+        'Hola, quiero un presupuesto de remodelación.%0A' +
+        'Nombre: ' + encodeURIComponent(f.nombre.value) + '%0A' +
+        'Comuna: ' + encodeURIComponent(f.comuna.value) + '%0A' +
+        'Servicio: ' + encodeURIComponent(f.servicio.value) + '%0A' +
+        'Detalle: ' + encodeURIComponent(f.detalle.value);
+      window.open('https://wa.me/' + wa + '?text=' + msg, '_blank');
+    });
+  </script>
+</Base>

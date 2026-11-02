@@ -1,0 +1,20 @@
+# Redirecciones 301: WordPress → Astro
+# Los artículos cambian de /slug/ a /blog/slug/
+
+/remodelar-cocina-pequena-ideas-precios/  /blog/remodelar-cocina-pequena-ideas-precios/  301
+/cuanto-cuesta-construir-quincho-santiago/  /blog/cuanto-cuesta-construir-quincho-santiago/  301
+/terraza-vs-quincho-cual-construir-santiago/  /blog/terraza-vs-quincho-cual-construir-santiago/  301
+/cuanto-cuesta-remodelar-un-bano-en-chile-precios-2026/  /blog/cuanto-cuesta-remodelar-un-bano-en-chile-precios-2026/  301
+/diferencia-renovacion-vs-remodelacion/  /blog/diferencia-renovacion-vs-remodelacion/  301
+/como-elegir-empresa-remodelacion-santiago/  /blog/como-elegir-empresa-remodelacion-santiago/  301
+/permiso-municipal-remodelar-casa-santiago/  /blog/permiso-municipal-remodelar-casa-santiago/  301
+/cuanto-cuesta-remodelar-cocina-santiago/  /blog/cuanto-cuesta-remodelar-cocina-santiago/  301
+/cuanto-cuesta-remodelar-bano-santiago/  /blog/cuanto-cuesta-remodelar-bano-santiago/  301
+/mamparas-de-bano-minimalistas-vidrio-templado/  /blog/mamparas-de-bano-minimalistas-vidrio-templado/  301
+/remodelacion-de-banos-en-santiago-disenos-e-ideas-modernas/  /blog/remodelacion-de-banos-en-santiago-disenos-e-ideas-modernas/  301
+/remodelacion-cocinas-santiago/  /blog/remodelacion-cocinas-santiago/  301
+
+# WordPress sobrantes
+/feed/                /blog/  301
+/wp-login.php         /  301
+/xmlrpc.php           /  404
