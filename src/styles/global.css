@@ -654,3 +654,24 @@ body.nav-open .hd a.hd__cta{background:var(--ink);color:#fff}
   .reveal{opacity:1;transform:none;transition:none}
   .hero__slide img{transition:none}
 }
+
+/* ---------- tabla de precios referenciales ---------- */
+.precios{max-width:1000px;margin:0 auto}
+.precios__tabla{width:100%;border-collapse:collapse;font-size:15.5px}
+.precios__tabla thead th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;padding:0 16px 12px;border-bottom:2px solid var(--line)}
+.precios__tabla tbody th{text-align:left;font-weight:600;color:var(--ink);padding:16px;border-bottom:1px solid var(--line);width:28%}
+.precios__tabla td{padding:16px;border-bottom:1px solid var(--line);color:var(--body);vertical-align:top;line-height:1.55}
+.precios__cifra{font-weight:600;color:var(--gold-deep);white-space:nowrap;font-variant-numeric:tabular-nums;width:24%}
+.precios__nota{font-size:13.5px;color:var(--ink-soft);line-height:1.65;margin:20px 0 0;padding-left:14px;border-left:3px solid var(--gold)}
+.precios__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn--ghost-dark{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn--ghost-dark:hover{background:var(--ink);color:var(--white)}
+@media(max-width:700px){
+  .precios__tabla thead{display:none}
+  .precios__tabla,.precios__tabla tbody,.precios__tabla tr,.precios__tabla th,.precios__tabla td{display:block;width:auto}
+  .precios__tabla tr{border:1px solid var(--line);border-radius:var(--r-md);padding:18px;margin-bottom:12px;background:var(--white)}
+  .precios__tabla tbody th,.precios__tabla td{border:0;padding:0 0 8px}
+  .precios__cifra{font-size:20px;padding-bottom:12px}
+  .precios__detalle{padding-bottom:0;font-size:14px}
+}

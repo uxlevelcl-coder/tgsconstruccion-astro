@@ -4,6 +4,8 @@ import site from '../data/site.json';
 import PageHero from './PageHero.astro';
 import { ICO } from '../data/iconos';
 interface Tipo { t: string; d: string; ico?: string }
+interface FilaPrecio { tipo: string; rango: string; incluye: string }
+interface Precios { titulo: string; filas: FilaPrecio[]; nota: string }
 interface Props {
   title: string;
   description: string;
@@ -16,10 +18,20 @@ interface Props {
   faq: { q: string; a: string }[];
   galeria?: { src: string; alt: string }[];
   intro?: { h2: string; parrafos: string[]; items: string[]; chip: string; img?: string; video?: string; poster?: string };
+  precios?: Precios;
 }
-const { title, description, eyebrow, h1, lead, img, h2tipos, tipos, faq, galeria = [], intro } = Astro.props;
+const { title, description, eyebrow, h1, lead, img, h2tipos, tipos, faq, galeria = [], intro, precios } = Astro.props;
 const introImg = intro?.img ?? galeria[0]?.src;
 const introAlt = galeria[0]?.alt ?? intro?.h2 ?? '';
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 ---
 <Base title={title} description={description}>
   <PageHero
@@ -59,6 +71,38 @@ const introAlt = galeria[0]?.alt ?? intro?.h2 ?? '';
       </div>
     </section>
   )}
+  {precios && (
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="eyebrow">Precios</span>
+          <h2>{precios.titulo}</h2>
+        </div>
+        <div class="precios">
+          <table class="precios__tabla">
+            <thead>
+              <tr><th scope="col">Tipo de trabajo</th><th scope="col">Valor referencial</th><th scope="col">Qué incluye</th></tr>
+            </thead>
+            <tbody>
+              {precios.filas.map((f) => (
+                <tr>
+                  <th scope="row">{f.tipo}</th>
+                  <td class="precios__cifra">{f.rango}</td>
+                  <td class="precios__detalle">{f.incluye}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p class="precios__nota">{precios.nota}</p>
+          <div class="precios__cta">
+            <a href="/contacto/" class="btn">Pedir presupuesto exacto</a>
+            <a href={`https://wa.me/${site.empresa.whatsapp}?text=${encodeURIComponent('Hola, quiero un presupuesto de remodelación.')}`} class="btn btn--ghost-dark" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
   {galeria.length > 0 && (
     <section class="section section--obras" style="background:var(--paper-2)">
       <div class="wrap">
@@ -151,6 +195,7 @@ const introAlt = galeria[0]?.alt ?? intro?.h2 ?? '';
       </div>
     </div>
   </section>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script>
     const vids = document.querySelectorAll('video[data-introvideo]');
     if (vids.length && 'IntersectionObserver' in window) {
