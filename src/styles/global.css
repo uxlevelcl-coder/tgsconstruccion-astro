@@ -484,7 +484,9 @@ body.nav-open .hd a.hd__cta{background:var(--ink);color:#fff}
 .article p{font-size:18px;line-height:1.72;color:var(--body)}
 .article ul,.article ol{font-size:18px;line-height:1.72;color:var(--body);padding-left:22px}
 .article li{margin-bottom:10px}
-.article table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;border-collapse:collapse;margin:28px 0;font-size:15.5px;max-width:100%}
+.article table{border-collapse:collapse;margin:28px 0;font-size:15.5px;max-width:100%}
+.tabla-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:700px){.tabla-scroll table{min-width:520px;margin:0}.tabla-scroll{margin:28px 0}}
 .article th,.article td{border-bottom:1px solid var(--line);padding:14px 14px;text-align:left;min-width:120px}
 .article th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--muted);font-weight:500;border-bottom:1px solid var(--line-2)}

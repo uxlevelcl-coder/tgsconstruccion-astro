@@ -60,4 +60,14 @@ const fmt = (d) => d.toLocaleDateString('es-CL', { day: 'numeric', month: 'long'
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    document.querySelectorAll('.article table').forEach((tb) => {
+      if (tb.parentElement && tb.parentElement.classList.contains('tabla-scroll')) return;
+      const w = document.createElement('div');
+      w.className = 'tabla-scroll';
+      tb.parentNode.insertBefore(w, tb);
+      w.appendChild(tb);
+    });
+  </script>
 </Base>
