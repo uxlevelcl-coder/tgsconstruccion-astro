@@ -53,8 +53,30 @@ const year = new Date().getFullYear();
 
 <a href={`https://wa.me/${site.empresa.whatsapp}?text=${encodeURIComponent('Hola, quiero un presupuesto de remodelación.')}`}
    class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+  <span class="wa-clip" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" width="29" height="29" fill="currentColor" aria-hidden="true">
     <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.5-1.4-1.8-.1-.3 0-.4.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/>
     <path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.8 3 1.3 4.7 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.2 15 3.8 13.5 3.8 12 3.8 7.5 7.5 3.8 12 3.8S20.2 7.5 20.2 12 16.5 20.2 12 20.2z"/>
   </svg>
 </a>
+
+<script>
+  // Onda al hacer clic en el botón de WhatsApp
+  document.querySelectorAll('.wa-float').forEach((boton) => {
+    boton.addEventListener('pointerdown', (e) => {
+      const capa = boton.querySelector('.wa-clip');
+      if (!capa) return;
+      const caja = boton.getBoundingClientRect();
+      const lado = Math.max(caja.width, caja.height);
+      const x = (e.clientX || caja.left + caja.width / 2) - caja.left - lado / 2;
+      const y = (e.clientY || caja.top + caja.height / 2) - caja.top - lado / 2;
+      const onda = document.createElement('span');
+      onda.className = 'wa-ripple';
+      onda.style.width = onda.style.height = `${lado}px`;
+      onda.style.left = `${x}px`;
+      onda.style.top = `${y}px`;
+      capa.appendChild(onda);
+      setTimeout(() => onda.remove(), 640);
+    });
+  });
+</script>
