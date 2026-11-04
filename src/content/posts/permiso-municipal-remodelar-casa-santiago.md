@@ -31,7 +31,7 @@ Depende del municipio. Estos son los plazos aproximados en las comunas donde tra
 
 El valor se calcula como un porcentaje del presupuesto de la obra (generalmente entre 1% y 1,5% del valor total). Además hay que sumar:
 
-## ¿Vos tenés que hacer el trámite o lo hace la empresa?
+## ¿Usted tiene que hacer el trámite o lo hace la empresa?
 
 Depende del acuerdo. En general:
 
@@ -39,6 +39,6 @@ Depende del acuerdo. En general:
 
 ![Barrio residencial en Santiago con letrero de obra — TGS Construcción](/img/ChatGPT-Image-13-jul-2026-12_24_21-p.m.webp)
 
-¿Tenés dudas sobre tu proyecto? Solicitá tu presupuesto sin costo →
+¿Tenés dudas sobre tu proyecto? Solicita tu presupuesto sin costo →
 
 *En TGS Construcción trabajamos con arquitectos habilitados para firmar planos y gestionamos todos los permisos ante la DOM. Tu remodelación, sin sorpresas.*

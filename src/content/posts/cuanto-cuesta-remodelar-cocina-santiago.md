@@ -39,7 +39,7 @@ Una cocina antigua suele tener problemas que no se ven: instalaciones de gas obs
 
 ## ¿Por qué elegir TGS Construcción?
 
-Llevamos años transformando cocinas en Santiago. Trabajamos en Ñuñoa, Providencia, Las Condes, Huechuraba y toda la Región Metropolitana:
+Llevamos años transformando cocinas en Santiago. Trabajamos en Ñuñoa, Providencia, Las Condes, Huechuraba, Buin, Paine, San Bernardo y toda la Región Metropolitana:
 
 Solicita tu presupuesto sin costo →
 

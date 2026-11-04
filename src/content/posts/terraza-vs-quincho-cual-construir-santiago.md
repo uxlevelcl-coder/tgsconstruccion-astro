@@ -1,11 +1,11 @@
 ---
 title: "Terraza vs quincho: ¿cuál te conviene construir en Santiago?"
-description: "Si tenés espacio exterior en tu casa, probablemente te preguntaste: ¿construyo una terraza o un quincho? Ambos transforman tu patio en un lugar para…"
+description: "Si tienes espacio exterior en tu casa, probablemente te preguntaste: ¿construyo una terraza o un quincho? Ambos transforman tu patio en un lugar para…"
 date: 2026-09-03
 image: "/img/blog/terraza-vs-quincho-cual-construir-santiago.webp"
 ---
 
-Si tenés espacio exterior en tu casa, probablemente te preguntaste: **¿construyo una terraza o un quincho?** Ambos transforman tu patio en un lugar para disfrutar, pero tienen funciones, costos y permisos muy distintos. En esta guía te ayudamos a decidir.
+Si tienes espacio exterior en tu casa, probablemente te preguntaste: **¿construyo una terraza o un quincho?** Ambos transforman tu patio en un lugar para disfrutar, pero tienen funciones, costos y permisos muy distintos. En esta guía te ayudamos a decidir.
 
 ## ¿Cuál es la diferencia?
 
@@ -28,13 +28,13 @@ Un **quincho** es una construcción techada, cerrada al menos parcialmente, que 
 
 ## ¿Cuándo te conviene una terraza?
 
-Elegí terraza si:
+Elija terraza si:
 
 ![Terraza moderna con pérgola de madera y parrilla en patio — TGS Construcción](/img/Terrace_with_pergola_and_grill_202609031009_a8867c.webp)
 
 ¿Cuándo te conviene un quincho?
 
-Elegí quincho si:
+Elija quincho si:
 
 Ejemplo real: cliente en Las Condes construyó un quincho de 15 m² con parrilla de obra, mesón de granito, barra y techo con tijerales a la vista. Costo: $7.500.000. Tiempo: 5 semanas.
 
@@ -44,7 +44,7 @@ Ejemplo real: cliente en Las Condes construyó un quincho de 15 m² con parrilla
 
 Muchos clientes combinan: una terraza semi-cubierta con un sector quincho en un extremo. Es la opción más completa pero también la más cara (desde $8M).
 
-La clave es planificar desde el principio. Si construís la terraza primero y después querés agregar el quincho, vas a pagar más que si hacés todo junto.
+La clave es planificar desde el principio. Si construye la terraza primero y después quiere agregar el quincho, va a pagar más que si hace todo junto.
 
 ## Zonas de Santiago donde más se construyen
 
@@ -58,6 +58,6 @@ En TGS nos encargamos de todo el trámite. Más info en nuestro artículo sobre 
 
 ## Consejos antes de decidir
 
-Solicitá tu presupuesto sin costo para terraza o quincho →
+Solicita tu presupuesto sin costo para terraza o quincho →
 
 *En TGS Construcción diseñamos y construimos terrazas y quinchos en Ñuñoa, Providencia, Las Condes, Huechuraba y todo Santiago. Presupuesto sin costo en 24 horas.*

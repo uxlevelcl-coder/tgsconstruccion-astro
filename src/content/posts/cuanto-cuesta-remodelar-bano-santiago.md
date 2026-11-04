@@ -47,7 +47,7 @@ Además, los baños antiguos suelen tener problemas ocultos: filtraciones que da
 
 ## ¿Por qué elegir TGS Construcción?
 
-Llevamos años transformando baños en Santiago. Trabajamos en Ñuñoa, Providencia, Las Condes, Huechuraba y toda la Región Metropolitana:
+Llevamos años transformando baños en Santiago. Trabajamos en Ñuñoa, Providencia, Las Condes, Huechuraba, Buin, Paine, San Bernardo y toda la Región Metropolitana:
 
 Solicita tu presupuesto sin costo →
 

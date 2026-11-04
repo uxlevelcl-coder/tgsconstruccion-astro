@@ -4,7 +4,7 @@
     "bajada": "Remodelación y construcción en Santiago",
     "telefono": "+56 9 4627 9208",
     "whatsapp": "56946279208",
-    "zonas": "Ñuñoa, Providencia, Las Condes, Huechuraba y toda la Región Metropolitana",
+    "zonas": "Ñuñoa, Providencia, Las Condes, Huechuraba, Buin, Paine, San Bernardo y toda la Región Metropolitana",
     "horario": "Lunes a viernes, 9:00 a 18:00",
     "email": "contacto@tgsconstruccion.cl",
     "comunas": [
@@ -12,7 +12,15 @@
       "Providencia",
       "Santiago",
       "Las Condes",
-      "Huechuraba"
+      "Huechuraba",
+      "Buin",
+      "Paine",
+      "San Bernardo",
+      "Calera de Tango",
+      "El Monte",
+      "Talagante",
+      "Peñaflor",
+      "Isla de Maipo"
     ]
   },
   "hero": {
@@ -120,8 +128,8 @@
         "respuesta": "El costo varía según el tamaño, los materiales y la complejidad de cada proyecto. Entregamos un presupuesto detallado y sin costo después de visitar la propiedad."
       },
       {
-        "pregunta": "¿En qué zonas de Santiago trabajan?",
-        "respuesta": "Trabajamos en todo Santiago: Ñuñoa, Providencia, Las Condes, Huechuraba y toda la Región Metropolitana. Visitamos tu propiedad sin costo."
+        "pregunta": "¿En qué zonas trabajan?",
+        "respuesta": "Trabajamos en toda la Región Metropolitana: Ñuñoa, Providencia, Las Condes, Huechuraba, Buin, Paine, San Bernardo, Calera de Tango y alrededores. Visitamos tu propiedad sin costo."
       },
       {
         "pregunta": "¿Ofrecen garantía en las remodelaciones?",

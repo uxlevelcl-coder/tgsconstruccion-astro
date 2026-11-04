@@ -11,11 +11,11 @@ Elegir una empresa de remodelación en Santiago puede ser abrumador. Hay decenas
 
 Desconfiá de cualquier presupuesto que llegue por WhatsApp como “baño: $2 palos”. Un presupuesto profesional debe incluir:
 
-Si la empresa no te da esto, buscá otra.
+Si la empresa no te da esto, busca otra.
 
 ## 2. Revisá trabajos anteriores reales
 
-Pedí fotos de proyectos terminados, idealmente similares al tuyo. Mejor aún: pedí visitar una obra en curso o ver un proyecto terminado. Cualquier empresa seria puede mostrarte ejemplos reales.
+Pedí fotos de proyectos terminados, idealmente similares al tuyo. Mejor aún: pide visitar una obra en curso o ver un proyecto terminado. Cualquier empresa seria puede mostrarte ejemplos reales.
 
 Desconfiá si solo te muestran renders 3D o fotos de Pinterest.
 
@@ -27,7 +27,7 @@ Si te dicen “después vemos” o no te dan garantía por escrito, es una alert
 
 ## 4. Verificá si trabajan con arquitectos
 
-Si tu remodelación requiere permiso municipal, necesitás un arquitecto que firme los planos. Una empresa que incluye arquitecto en su equipo te ahorra contratar a dos proveedores distintos.
+Si tu remodelación requiere permiso municipal, necesitas un arquitecto que firme los planos. Una empresa que incluye arquitecto en su equipo te ahorra contratar a dos proveedores distintos.
 
 En TGS Construcción trabajamos con arquitectos habilitados para firmar planos. Más info en nuestro artículo sobre permisos municipales para remodelar.
 
@@ -37,7 +37,7 @@ El presupuesto más barato suele omitir cosas: materiales de menor calidad, sin 
 
 | Tipo de empresa | Rango de precio | ¿Qué incluye? |
 | --- | --- | --- |
-| Maestro particular | $800K – $1.5M | Solo mano de obra, vos comprás materiales |
+| Maestro particular | $800K – $1.5M | Solo mano de obra, usted compra los materiales |
 | Empresa pequeña | $1.5M – $4M | Materiales + mano de obra, garantía limitada |
 | Empresa establecida | $2.5M – $8M | Todo incluido: materiales, arquitecto, permisos, garantía |
 
@@ -45,14 +45,14 @@ El presupuesto más barato suele omitir cosas: materiales de menor calidad, sin 
 
 Muchas empresas mandan un vendedor a tu casa que promete de todo. Después la obra la hace un equipo externo que no conocés. Preguntá:
 
-## 7. Leé reseñas en Google Maps
+## 7. Lea reseñas en Google Maps
 
-Google Maps es más confiable que los testimonios del sitio web (que la empresa puede elegir). Buscá el perfil de Google Business de la empresa y leé las reseñas. Fijate en:
+Google Maps es más confiable que los testimonios del sitio web (que la empresa puede elegir). Busque el perfil de Google Business de la empresa y lea las reseñas. Fíjese en:
 
 ## 8. Ojo con el “mínimo” de obra
 
 Algunas empresas ponen un monto mínimo para aceptar un proyecto. Preguntalo en la primera llamada para no perder tiempo. En TGS no tenemos mínimo: hacemos desde un cambio de cerámica hasta una remodelación completa.
 
-Solicitá tu presupuesto sin costo en 24 horas →
+Solicita tu presupuesto sin costo en 24 horas →
 
 *En TGS Construcción llevamos años transformando hogares en Ñuñoa, Providencia, Las Condes, Huechuraba y todo Santiago. Presupuesto detallado, visita de evaluación sin costo y garantía por escrito.*
