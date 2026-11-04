@@ -441,6 +441,7 @@ body.nav-open .hd a.hd__cta{background:var(--ink);color:#fff}
 /* ---------- footer ---------- */
 .ft{background:var(--ink-2);color:rgba(255,254,252,.6);padding:clamp(36px,4vw,52px) 0 22px;
   font-size:14.5px}
+@media(max-width:700px){.ft{padding-bottom:96px}}
 .ft__grid{display:grid;grid-template-columns:1.45fr .85fr .75fr 1fr .95fr;gap:clamp(18px,2.2vw,34px)}
 .ft h2{color:var(--white);font-size:11px;font-family:var(--mono);letter-spacing:.16em;
   text-transform:uppercase;margin-bottom:14px;font-weight:500}
@@ -451,6 +452,9 @@ body.nav-open .hd a.hd__cta{background:var(--ink);color:#fff}
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
   color:rgba(255,254,252,.34)}
+.ft__credito{color:rgba(255,254,252,.34);text-decoration:none;
+  border-bottom:1px solid transparent;transition:color var(--t),border-color var(--t)}
+.ft__credito:hover,.ft__credito:focus-visible{color:var(--gold);border-bottom-color:var(--gold)}
 @media(max-width:940px){.ft__grid{grid-template-columns:1fr 1fr;gap:24px 32px}
   .ft__grid > div:first-child{grid-column:1/-1}}
 @media(max-width:560px){.ft__grid{grid-template-columns:minmax(0,1fr);gap:22px}
