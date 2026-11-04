@@ -19,6 +19,9 @@ const ogImage = image ?? '/img/foto_04-scaled.webp';
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Tag Manager -->
+  <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NG86DKBV');</script>
+  <!-- End Google Tag Manager -->
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={url} />
@@ -34,9 +37,25 @@ const ogImage = image ?? '/img/foto_04-scaled.webp';
   <slot name="head" />
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG86DKBV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <Header />
   <main><slot /></main>
   <Footer />
+  <script>
+    // Evento de WhatsApp para GTM / GA4 (reemplaza joinchat_click del sitio anterior)
+    window.dataLayer = window.dataLayer || [];
+    document.addEventListener('click', (e) => {
+      const enlace = e.target instanceof Element ? e.target.closest('a[href*="wa.me"]') : null;
+      if (!enlace) return;
+      window.dataLayer.push({
+        event: 'whatsapp_click',
+        wa_ubicacion: enlace.classList.contains('wa-float') ? 'boton_flotante' : (enlace.classList.value || 'enlace'),
+        wa_pagina: location.pathname,
+      });
+    }, true);
+  </script>
   <script>
     (() => {
       const items = document.querySelectorAll('.reveal');
