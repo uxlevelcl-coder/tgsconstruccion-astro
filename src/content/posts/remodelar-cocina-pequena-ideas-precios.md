@@ -17,12 +17,12 @@ En una cocina pequeña, el metro cuadrado rinde más y el precio total suele ser
 
 ## Ideas para aprovechar el espacio
 
-![Cocina de departamento remodelada en Santiago con mesón de madera y cerámica de piso](/img/Renovated_kitchen_in_apartment_2K_20260928114309_173b67-scaled.jpg)
+![Cocina compacta remodelada con muebles claros y cubierta de cuarzo](/img/cocina-compacta.webp)
 Cocina en L que aprovecha el espacio al máximo
 
 ## Errores que conviene evitar
 
-![Cocina con muebles color crema, mesón de cuarzo y conexión de gas visible](/img/Kitchen_with_plants_and_stove_2K_20260928114356_1ac0fd-scaled.jpg)
+![Cocina pequeña remodelada con muebles de madera clara](/img/cocina-madera.webp)
 Instalaciones nuevas de gas y agua en cocina
 
 ## ¿Se pueden cambiar las instalaciones?
