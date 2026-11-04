@@ -1,5 +1,5 @@
 ---
-title: "Remodelación de Cocinas en Santiago Diseños Modernos y Funcionales"
+title: "Remodelación de cocinas en Santiago: diseños modernos"
 description: "La remodelación de cocinas en Santiago ha evolucionado hacia espacios de alta funcionalidad y diseño contemporáneo, donde la estética minimalista se…"
 date: 2026-06-12
 image: "/img/blog/remodelacion-cocinas-santiago.webp"

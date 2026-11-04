@@ -1,5 +1,5 @@
 ---
-title: "Diferencia entre renovacion y remodelacion"
+title: "Diferencia entre renovación y remodelación"
 description: "Mucha gente usa renovar y remodelar como sinonimos, pero en construccion son distintos. Cual es la diferencia La renovacion es devolver algo a su estado…"
 date: 2026-08-04
 image: "/img/blog/diferencia-renovacion-vs-remodelacion.webp"

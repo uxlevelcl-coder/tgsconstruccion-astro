@@ -1,5 +1,5 @@
 ---
-title: "¿Cuánto cuesta construir un quincho en Santiago? Precios 2026"
+title: "Cuánto cuesta construir un quincho en Santiago (2026)"
 description: "El quincho es el corazón del verano chileno: el lugar donde la familia se reúne, los amigos llegan y el asado se convierte en ceremonia. Si está pensando…"
 date: 2026-09-09
 image: "/img/blog/cuanto-cuesta-construir-quincho-santiago.webp"

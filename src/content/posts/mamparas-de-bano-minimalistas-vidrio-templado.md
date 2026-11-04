@@ -1,5 +1,5 @@
 ---
-title: "Mamparas de baño: Vidrio templado, serigrafía y herrajes invisibles para un acabado minimalista"
+title: "Mamparas de baño: vidrio templado y herrajes invisibles"
 description: "Las mamparas de baño minimalistas son la evolución definitiva en el diseño de interiores contemporáneo. Se definen por el uso de vidrio templado de alta…"
 date: 2026-06-23
 image: "/img/blog/mamparas-de-bano-minimalistas-vidrio-templado.webp"

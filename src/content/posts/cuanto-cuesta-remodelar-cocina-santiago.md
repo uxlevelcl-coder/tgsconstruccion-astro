@@ -1,5 +1,5 @@
 ---
-title: "¿Cuánto cuesta remodelar una cocina en Santiago? Precios 2026"
+title: "Cuánto cuesta remodelar una cocina en Santiago (2026)"
 description: "Si estás pensando en renovar tu cocina, la primera pregunta es inevitable: ¿cuánto cuesta? En esta guía te explicamos los factores que influyen en el…"
 date: 2026-07-06
 image: "/img/blog/cuanto-cuesta-remodelar-cocina-santiago.webp"
@@ -23,7 +23,17 @@ Si lo que necesitas es solo el **amoblado** (muebles, cubierta e instalación) y
 
 ## Precios de referencia en Santiago (2026)
 
-Valores aproximados para una remodelación en Santiago, Ñuñoa, Providencia, Las Condes y Huechuraba. Incluyen materiales y mano de obra:
+Para una cocina de 6 a 10 m² en la Región Metropolitana, estos son los rangos que se manejan en el mercado durante 2026. Incluyen materiales y mano de obra:
+
+| Tipo de trabajo | Valor referencial |
+|---|---|
+| Remodelación cosmética (pintura, accesorios, puertas) | $300.000 – $700.000 |
+| Renovación parcial (mesón, grifería y salpicadero) | $700.000 – $1.800.000 |
+| Completa con muebles modulares | $1.500.000 – $4.000.000 |
+| Completa con carpintería a medida | $3.500.000 – $7.000.000 |
+| Cocina de alto estándar | $7.000.000 – $15.000.000 o más |
+
+Son valores referenciales y no una cotización: el presupuesto exacto depende de las medidas reales, de si se mueven las instalaciones y de los materiales que usted elija. En la página de [remodelación de cocinas en Santiago](/remodelacion-cocinas/) está el detalle de qué incluye cada tipo de trabajo, cuánto demora y cómo se pide el presupuesto sin costo.
 
 ## Desglose de costos típicos
 

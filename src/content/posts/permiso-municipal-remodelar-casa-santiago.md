@@ -1,5 +1,5 @@
 ---
-title: "¿Necesito permiso municipal para remodelar mi casa en Santiago? Guía 2026"
+title: "¿Necesita permiso municipal para remodelar su casa?"
 description: "Una de las preguntas más comunes antes de empezar una remodelación es: ¿necesito permiso municipal? La respuesta corta: depende del tipo de obra. En esta…"
 date: 2026-07-13
 image: "/img/blog/permiso-municipal-remodelar-casa-santiago.webp"

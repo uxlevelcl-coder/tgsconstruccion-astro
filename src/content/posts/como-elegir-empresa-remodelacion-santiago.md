@@ -1,5 +1,5 @@
 ---
-title: "¿Cómo elegir una empresa de remodelación en Santiago? 8 claves"
+title: "Cómo elegir una empresa de remodelación en Santiago"
 description: "Elegir una empresa de remodelación en Santiago puede ser abrumador. Hay decenas de opciones, precios muy distintos y todos prometen “calidad”. En esta…"
 date: 2026-07-21
 image: "/img/blog/como-elegir-empresa-remodelacion-santiago.webp"

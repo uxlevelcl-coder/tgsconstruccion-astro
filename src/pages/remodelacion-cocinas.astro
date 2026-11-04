@@ -2,11 +2,11 @@
 import ServiceLanding from '../components/ServiceLanding.astro';
 ---
 <ServiceLanding
-  title="Remodelación de Cocinas en Santiago | TGS Construcción"
-  description="Remodelación de cocinas en Santiago: muebles a medida, cubiertas, cerámica e iluminación. Proyecto llave en mano y presupuesto sin costo."
+  title="Remodelación de Cocinas en Santiago: Precio y Plazos 2026"
+  description="Cuánto cuesta remodelar una cocina en Santiago: rangos por tipo de trabajo, qué incluye y plazos reales. Presupuesto sin costo en 24 horas."
   eyebrow="Remodelación de cocinas"
   h1="Remodelación de cocinas en Santiago"
-  lead="Muebles a medida, cubiertas, cerámica, iluminación y electrificación. Diseñamos la cocina según cómo la usa su familia."
+  lead="Muebles a medida, cubiertas, cerámica, iluminación y electrificación. Rangos de precio claros y el diseño armado según cómo su familia usa la cocina."
   img="/img/Remodelacion-de-cocina_tgsconstruccion-1024x472.webp"
   h2tipos="Tipos de remodelación de cocinas"
   tipos={[
@@ -14,25 +14,44 @@ import ServiceLanding from '../components/ServiceLanding.astro';
     { t: 'Remodelación integral', ico: 'integral', d: 'Demolición, instalaciones nuevas, distribución, muebles, cubierta y terminaciones.' },
     { t: 'Cocina + logia', ico: 'logia', d: 'Integramos la logia al proyecto para ganar almacenamiento y ordenar el lavado.' },
   ]}
+  precios={{
+    titulo: 'Cuánto cuesta remodelar una cocina en Santiago',
+    filas: [
+      { tipo: 'Remodelación cosmética', rango: '$300.000 – $700.000', incluye: 'Pintura, accesorios y cambio de puertas de muebles. Sin obras ni mesón nuevo.' },
+      { tipo: 'Renovación parcial', rango: '$700.000 – $1.800.000', incluye: 'Mesón nuevo, grifería y cerámica de salpicadero. Mantiene la distribución y los muebles de cuerpo.' },
+      { tipo: 'Completa con muebles modulares', rango: '$1.500.000 – $4.000.000', incluye: 'Cocina de 6 a 10 m²: muebles de catálogo, mesón postformado o granito simple, cerámica nueva.' },
+      { tipo: 'Completa con carpintería a medida', rango: '$3.500.000 – $7.000.000', incluye: 'Muebles a medida en MDF o madera, mesón de cuarzo o granito, cerámica e iluminación nuevas.' },
+      { tipo: 'Cocina de alto estándar', rango: '$7.000.000 – $15.000.000 o más', incluye: 'Mesón importado, muebles lacados, electrodomésticos de gama alta e isla central.' },
+    ],
+    nota: 'Valores referenciales del mercado de la Región Metropolitana para cocinas de 6 a 10 m², revisados en 2026. En TGS la cotización se arma por metro lineal de mueble y por el nivel de terminación que usted elija. La visita y el presupuesto son sin costo.',
+  }}
   faq={[
-    { q: '¿Cuánto demora una remodelación de cocina?', a: 'Una remodelación integral demora entre 3 y 5 semanas, según la complejidad de las instalaciones.' },
-    { q: '¿Puedo cocinar durante la obra?', a: 'En una remodelación integral no. Coordinamos el calendario para que el tiempo sin cocina sea el mínimo.' },
-    { q: '¿Qué incluye el servicio?', a: 'Diseño, demolición, gasfitería, electricidad, muebles, cubierta, cerámica, pintura y limpieza final.' },
-    { q: '¿Trabajan con muebles a medida?', a: 'Sí, los muebles se fabrican a medida según el espacio y el uso que le dará a la cocina.' },
+    { q: '¿Cuánto cuesta remodelar una cocina en Santiago?', a: 'Una cocina de 6 a 10 m² con muebles modulares y mesón nuevo se mueve entre $1.500.000 y $4.000.000. Con carpintería a medida y mesón de cuarzo, entre $3.500.000 y $7.000.000. Una renovación parcial, cambiando solo mesón, grifería y salpicadero, parte en $700.000.' },
+    { q: '¿Cuánto demora una remodelación de cocina?', a: 'Una remodelación integral demora entre 3 y 5 semanas, según la complejidad de las instalaciones. Un cambio de muebles y cubierta sin tocar instalaciones toma entre 10 y 15 días hábiles.' },
+    { q: '¿Qué incluye el servicio?', a: 'Diseño, demolición, retiro de escombros, gasfitería, electricidad, muebles, cubierta, cerámica, pintura, iluminación y limpieza final. Llave en mano, con un solo responsable.' },
+    { q: '¿Puedo cocinar durante la obra?', a: 'En una remodelación integral no, porque se corta el agua y la electricidad de la zona. Coordinamos el calendario para que el tiempo sin cocina sea el mínimo y, si hay logia, dejamos un punto de agua provisorio.' },
+    { q: '¿Los muebles son a medida?', a: 'Sí. Se fabrican según el espacio y el uso real: altura del mesón, altura de los muebles altos y distribución de cajones. Un mueble a medida rinde mejor un rincón que un módulo de catálogo.' },
+    { q: '¿Se puede integrar la logia a la cocina?', a: 'Sí, y es de las remodelaciones que más cambia el día a día: se gana almacenamiento, se ordena el lavado y la cocina deja de tener la lavadora a la vista. Requiere revisar ventilación y desagüe antes de presupuestar.' },
+    { q: '¿Hay que cambiar la instalación de gas?', a: 'Solo si se mueve la cocina, el calefón o el horno. Cualquier modificación de gas la ejecuta un gasfíter con licencia SEC y se entrega con su certificado, que es lo que pide la administración del edificio.' },
+    { q: '¿Trabajan en departamentos con conserjería?', a: 'Sí. Avisamos el ingreso, respetamos el horario de obra del edificio, protegemos el trayecto y retiramos los escombros el mismo día.' },
+    { q: '¿Ofrecen garantía?', a: 'Sí. Los trabajos quedan con garantía por escrito, respaldada en el contrato, incluyendo muebles, cubierta e instalaciones.' },
   ]}
   intro={{
-    h2: 'Diseño de cocinas modernas en Santiago',
+    h2: 'Una cocina armada según cómo la usa, no según el catálogo',
     parrafos: [
-      'La cocina es el corazón del hogar. En TGS Construcción somos especialistas en remodelación de cocinas en Santiago, transformando espacios anticuados en cocinas modernas, funcionales y con acabados de primera calidad. Nuestro equipo trabaja en Ñuñoa, Providencia, Las Condes, Huechuraba y toda la Región Metropolitana.',
-      'Cada proyecto comienza con un diseño personalizado: escuchamos tus necesidades, medimos tu espacio y creamos una propuesta que maximiza cada centímetro. Trabajamos con cubiertas de cuarzo, muebles de melamina a medida, herrajes Blum de alta durabilidad y grifería premium. Todo con garantía incluida.',
+      'En una cocina se toman decisiones que se notan todos los días: dónde queda el mesón de trabajo, a qué altura va el mueble alto, cuánto espacio necesita entre el lavaplatos y la cocina. Cuando esas medidas se respetan, la cocina se usa bien por años. Cuando no, se termina trabajando incómodo en un espacio que costó caro.',
+      'Medimos el espacio real y armamos la distribución con el triángulo de trabajo en mente: lavaplatos, cocina y refrigerador a distancias cortas. En cocinas de departamento, donde todo se mueve en pocos metros, esa distribución es lo que decide si el espacio funciona.',
+      'La parte que no se ve también importa. Revisamos la ventilación y la extracción antes de cerrar la cubierta, cambiamos la llave de paso si está vencida y dejamos la instalación de gas certificada por un gasfíter con licencia SEC cuando hay que mover artefactos.',
+      'Una remodelación integral toma entre 3 y 5 semanas. Un cambio de muebles y cubierta sin tocar instalaciones toma entre 10 y 15 días hábiles. En ambos casos coordinamos gasfitería, electricidad, muebles y pintura con un solo responsable.',
+      'Trabajamos en Ñuñoa, Providencia, Las Condes, Huechuraba, Buin, San Bernardo y toda la Región Metropolitana, tanto en casas como en departamentos con conserjería y horario de obra.',
     ],
     items: [
-      'Diseño ergonómico y optimización de espacios',
-      'Muebles modulares de alta calidad',
-      'Electrodomésticos empotrados de última generación',
-      'Iluminación LED focalizada y ambiental',
+      'Distribución diseñada con el triángulo de trabajo',
+      'Muebles a medida según las medidas reales del espacio',
       'Cubiertas de cuarzo, granito o porcelanato',
-      'Soluciones de almacenamiento inteligente',
+      'Extracción y ventilación revisadas antes de cerrar',
+      'Instalación de gas certificada cuando corresponde',
+      'Integración de logia para ganar almacenamiento',
     ],
     chip: 'Cocinas',
   }}
