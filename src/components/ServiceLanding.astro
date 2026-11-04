@@ -221,7 +221,7 @@ const faqSchema = {
   </section>
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <script>
-    const vids = document.querySelectorAll('video[data-introvideo], video[data-galvideo]');
+    const vids = document.querySelectorAll('video[data-introvideo]');
     if (vids.length && 'IntersectionObserver' in window) {
       const io = new IntersectionObserver((es) => {
         es.forEach(e => {
@@ -231,6 +231,17 @@ const faqSchema = {
       }, { threshold: 0.35 });
       vids.forEach(v => io.observe(v));
     }
+
+    /* los videos de la galería muestran su portada y se reproducen al pasar el mouse */
+    document.querySelectorAll('video[data-galvideo]').forEach(v => {
+      const fig = v.closest('.gal__i');
+      const arranca = () => { v.play().catch(() => {}); };
+      const para = () => { v.pause(); v.currentTime = 0; };
+      fig.addEventListener('mouseenter', arranca);
+      fig.addEventListener('mouseleave', para);
+      fig.addEventListener('focus', arranca);
+      fig.addEventListener('blur', para);
+    });
 
     /* ---------- visor de la galería (lightbox) ---------- */
     (() => {
