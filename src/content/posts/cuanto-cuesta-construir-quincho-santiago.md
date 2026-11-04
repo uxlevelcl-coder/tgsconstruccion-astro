@@ -3,9 +3,15 @@ title: "Cuánto cuesta construir un quincho en Santiago (2026)"
 description: "El quincho es el corazón del verano chileno: el lugar donde la familia se reúne, los amigos llegan y el asado se convierte en ceremonia. Si está pensando…"
 date: 2026-09-09
 image: "/img/blog/cuanto-cuesta-construir-quincho-santiago.webp"
+servicio:
+  href: "/construccion-quinchos/"
+  t: "Construcción de quinchos: presupuesto y proyectos"
+relacionados:
+  - "terraza-vs-quincho-cual-construir-santiago"
+  - "permiso-municipal-remodelar-casa-santiago"
 ---
 
-El quincho es el corazón del verano chileno: el lugar donde la familia se reúne, los amigos llegan y el asado se convierte en ceremonia. Si está pensando en construir un quincho en su patio o terraza, probablemente se pregunta cuánto cuesta la construcción de un quincho en Santiago y por dónde empezar. Esta guía responde ambas preguntas con claridad.
+El quincho es el corazón del verano chileno: el lugar donde la familia se reúne, los amigos llegan y el asado se convierte en ceremonia. Si está pensando en [construir un quincho](/construccion-quinchos/) en su patio o terraza, probablemente se pregunta cuánto cuesta la construcción de un quincho en Santiago y por dónde empezar. Esta guía responde ambas preguntas con claridad.
 
 **Importante: los precios indicados son aproximados.** Cada proyecto es distinto y el valor final se define con una visita técnica, donde evaluamos su patio, sus necesidades y sus expectativas.
 

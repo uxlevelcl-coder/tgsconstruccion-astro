@@ -3,6 +3,12 @@ title: "Cuánto cuesta remodelar una cocina en Santiago (2026)"
 description: "Si estás pensando en renovar tu cocina, la primera pregunta es inevitable: ¿cuánto cuesta? En esta guía te explicamos los factores que influyen en el…"
 date: 2026-07-06
 image: "/img/blog/cuanto-cuesta-remodelar-cocina-santiago.webp"
+servicio:
+  href: "/remodelacion-cocinas/"
+  t: "Remodelación de cocinas: precios, plazos y proyectos"
+relacionados:
+  - "remodelar-cocina-pequena-ideas-precios"
+  - "remodelacion-cocinas-santiago"
 ---
 
 Si estás pensando en renovar tu cocina, la primera pregunta es inevitable: **¿cuánto cuesta?** En esta guía te explicamos los factores que influyen en el precio, rangos actualizados para Santiago en 2026 y consejos para ahorrar sin perder calidad.

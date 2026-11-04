@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import site from '../data/site.json';
 import PageHero from './PageHero.astro';
 import { ICO } from '../data/iconos';
+import SigueLeyendo from './SigueLeyendo.astro';
 interface Tipo { t: string; d: string; ico?: string }
 interface FilaPrecio { tipo: string; rango: string; incluye: string }
 interface Precios { titulo: string; filas: FilaPrecio[]; nota: string }
@@ -19,8 +20,9 @@ interface Props {
   galeria?: { src: string; alt: string; video?: string }[];
   intro?: { h2: string; parrafos: string[]; items: string[]; pasos?: { t: string; d: string }[]; chip: string; img?: string; video?: string; poster?: string };
   precios?: Precios;
+  lecturas?: { href: string; t: string; d?: string }[];
 }
-const { title, description, eyebrow, h1, lead, img, h2tipos, tipos, faq, galeria = [], intro, precios } = Astro.props;
+const { title, description, eyebrow, h1, lead, img, h2tipos, tipos, faq, galeria = [], intro, precios, lecturas = [] } = Astro.props;
 const introImg = intro?.img ?? galeria[0]?.src;
 const introAlt = galeria[0]?.alt ?? intro?.h2 ?? '';
 const faqSchema = {
@@ -208,6 +210,8 @@ const faqSchema = {
     </div>
   </section>
 
+
+  {lecturas.length > 0 && <SigueLeyendo items={lecturas} eyebrow="Guías" titulo="Para seguir leyendo" />}
 
   <section class="cta">
     <div class="wrap">

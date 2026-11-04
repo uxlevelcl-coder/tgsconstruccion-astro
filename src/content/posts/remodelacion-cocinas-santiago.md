@@ -3,9 +3,15 @@ title: "Remodelación de cocinas en Santiago: diseños modernos"
 description: "La remodelación de cocinas en Santiago ha evolucionado hacia espacios de alta funcionalidad y diseño contemporáneo, donde la estética minimalista se…"
 date: 2026-06-12
 image: "/img/blog/remodelacion-cocinas-santiago.webp"
+servicio:
+  href: "/remodelacion-cocinas/"
+  t: "Remodelación de cocinas: precios, plazos y proyectos"
+relacionados:
+  - "cuanto-cuesta-remodelar-cocina-santiago"
+  - "remodelar-cocina-pequena-ideas-precios"
 ---
 
-La remodelación de cocinas en Santiago ha evolucionado hacia espacios de alta funcionalidad y diseño contemporáneo, donde la estética minimalista se fusiona con una ingeniería impecable. Un proyecto premium no solo renueva muebles y cubiertas, sino que optimiza las instalaciones de gas, electricidad y ventilación bajo las normativas chilenas (SEC), integrando electrodomésticos empotrados y materiales de alta durabilidad. En TGS Construcción, transformamos cocinas tradicionales en centros neurálgicos del hogar, garantizando acabados de lujo y una ejecución técnica sin fisuras.
+La [remodelación de cocinas](/remodelacion-cocinas/) en Santiago ha evolucionado hacia espacios de alta funcionalidad y diseño contemporáneo, donde la estética minimalista se fusiona con una ingeniería impecable. Un proyecto premium no solo renueva muebles y cubiertas, sino que optimiza las instalaciones de gas, electricidad y ventilación bajo las normativas chilenas (SEC), integrando electrodomésticos empotrados y materiales de alta durabilidad. En TGS Construcción, transformamos cocinas tradicionales en centros neurálgicos del hogar, garantizando acabados de lujo y una ejecución técnica sin fisuras.
 
 ## 1. Tendencias en Diseño de Cocinas Modernas (2026)
 

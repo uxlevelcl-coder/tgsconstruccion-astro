@@ -3,6 +3,13 @@ title: "Remodelación de baños en Santiago: diseños e ideas 2026"
 description: "El baño es el espacio donde comienza y termina tu día. En Santiago, donde la arquitectura combina desde casas tradicionales hasta departamentos de alta…"
 date: 2026-06-17
 image: "/img/blog/remodelacion-de-banos-en-santiago-disenos-e-ideas-modernas.webp"
+servicio:
+  href: "/remodelacion-de-banos/"
+  t: "Remodelación de baños: precios, plazos y proyectos"
+relacionados:
+  - "mamparas-de-bano-minimalistas-vidrio-templado"
+  - "cuanto-cuesta-remodelar-bano-santiago"
+  - "diferencia-renovacion-vs-remodelacion"
 ---
 
 El baño es el espacio donde comienza y termina tu día. En Santiago, donde la arquitectura combina desde casas tradicionales hasta departamentos de alta densidad, transformar este ambiente es fundamental para mejorar el confort y la plusvalía de tu propiedad.

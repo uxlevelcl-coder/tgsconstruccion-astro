@@ -10,6 +10,8 @@ const posts = defineCollection({
     draft: z.boolean().optional().default(false),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
+    relacionados: z.array(z.string()).optional().default([]),
+    servicio: z.object({ href: z.string(), t: z.string() }).optional(),
   }),
 });
 

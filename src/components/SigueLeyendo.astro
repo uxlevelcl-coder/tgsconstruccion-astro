@@ -1,0 +1,27 @@
+---
+interface Item { href: string; t: string; d?: string; destacado?: boolean }
+interface Props { items: Item[]; titulo?: string; eyebrow?: string }
+const { items, titulo = "Para seguir leyendo", eyebrow = "Guías" } = Astro.props;
+---
+<section class="section rel">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">{eyebrow}</span>
+      <h2>{titulo}</h2>
+    </div>
+    <ul class="rel__lista">
+      {items.map((i) => (
+        <li class={`rel__i${i.destacado ? " rel__i--serv" : ""}`}>
+          <a href={i.href}>
+            {i.destacado && <span class="rel__tag">Servicio</span>}
+            <span class="rel__t">{i.t}</span>
+            {i.d && <span class="rel__d">{i.d}</span>}
+            <span class="rel__flecha" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

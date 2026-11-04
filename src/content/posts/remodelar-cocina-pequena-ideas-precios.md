@@ -3,9 +3,15 @@ title: "Remodelar una cocina pequeña: ideas y precios 2026"
 description: "Las cocinas pequeñas tienen un desafío particular: hay que hacer caber todo lo necesario sin que el espacio se sienta estrecho. La buena noticia es que…"
 date: 2026-09-28
 image: "/img/blog/remodelar-cocina-pequena-ideas-precios.webp"
+servicio:
+  href: "/remodelacion-cocinas/"
+  t: "Remodelación de cocinas: precios, plazos y proyectos"
+relacionados:
+  - "cuanto-cuesta-remodelar-cocina-santiago"
+  - "remodelacion-cocinas-santiago"
 ---
 
-Las cocinas pequeñas tienen un desafío particular: hay que hacer caber todo lo necesario sin que el espacio se sienta estrecho. La buena noticia es que una cocina pequeña bien remodelada puede ser más cómoda y funcional que una grande mal aprovechada. En esta guía le mostramos ideas concretas y precios referenciales para Santiago en 2026.
+Las cocinas pequeñas tienen un desafío particular: hay que hacer caber todo lo necesario sin que el espacio se sienta estrecho. La buena noticia es que una cocina pequeña bien remodelada puede ser más cómoda y funcional que una grande mal aprovechada. En esta guía le mostramos ideas concretas y precios referenciales para Santiago en 2026. Si quiere el desglose por tipo de trabajo, la página de [remodelación de cocinas](/remodelacion-cocinas/) reúne precios, plazos y proyectos entregados.
 
 **Importante: los precios indicados son aproximados.** Cada proyecto es distinto y el valor se define con una visita técnica.
 

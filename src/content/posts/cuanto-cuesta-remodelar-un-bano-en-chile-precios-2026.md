@@ -3,6 +3,12 @@ title: "¿Cuánto cuesta remodelar un baño en Chile? Precios 2026"
 description: "Si está pensando en renovar su baño, la primera pregunta es: ¿cuánto cuesta? En esta guía le mostramos los rangos de precios reales en Chile para 2026,…"
 date: 2026-08-25
 image: "/img/blog/cuanto-cuesta-remodelar-un-bano-en-chile-precios-2026.webp"
+servicio:
+  href: "/remodelacion-de-banos/"
+  t: "Remodelación de baños: precios, plazos y proyectos"
+relacionados:
+  - "cuanto-cuesta-remodelar-bano-santiago"
+  - "remodelacion-de-banos-en-santiago-disenos-e-ideas-modernas"
 ---
 
 Si está pensando en renovar su baño, la primera pregunta es: **¿cuánto cuesta?** En esta guía le mostramos los rangos de precios reales en Chile para 2026, qué factores influyen y cómo ahorrar sin perder calidad.
@@ -11,7 +17,7 @@ Si está pensando en renovar su baño, la primera pregunta es: **¿cuánto cuest
 
 ## Rangos de precios por tipo de remodelación
 
-Estos son los rangos orientativos para Santiago:
+Estos son los rangos orientativos para Santiago. Si quiere el desglose por tipo de trabajo, revise la página de [remodelación de baños](/remodelacion-de-banos/), con precios, plazos y proyectos entregados:
 
 ## ¿Qué incluye el precio?
 

@@ -3,15 +3,21 @@ title: "Terraza vs quincho: ¿cuál te conviene construir en Santiago?"
 description: "Si tienes espacio exterior en tu casa, probablemente te preguntaste: ¿construyo una terraza o un quincho? Ambos transforman tu patio en un lugar para…"
 date: 2026-09-03
 image: "/img/blog/terraza-vs-quincho-cual-construir-santiago.webp"
+servicio:
+  href: "/construccion-de-terrazas/"
+  t: "Construcción de terrazas: presupuesto y proyectos"
+relacionados:
+  - "cuanto-cuesta-construir-quincho-santiago"
+  - "permiso-municipal-remodelar-casa-santiago"
 ---
 
 Si tienes espacio exterior en tu casa, probablemente te preguntaste: **¿construyo una terraza o un quincho?** Ambos transforman tu patio en un lugar para disfrutar, pero tienen funciones, costos y permisos muy distintos. En esta guía te ayudamos a decidir.
 
 ## ¿Cuál es la diferencia?
 
-Una **terraza** es un espacio abierto o semi-cubierto, generalmente con piso de cerámica, madera o piedra. Se usa para reuniones informales, asados con parrilla móvil, o simplemente relajarse.
+Una **[terraza](/construccion-de-terrazas/)** es un espacio abierto o semi-cubierto, generalmente con piso de cerámica, madera o piedra. Se usa para reuniones informales, asados con parrilla móvil, o simplemente relajarse.
 
-Un **quincho** es una construcción techada, cerrada al menos parcialmente, que incluye parrilla fija, mesón, lavaplatos y espacio para comer. Es una cocina exterior completa.
+Un **[quincho](/construccion-quinchos/)** es una construcción techada, cerrada al menos parcialmente, que incluye parrilla fija, mesón, lavaplatos y espacio para comer. Es una cocina exterior completa.
 
 ## Comparativa directa
 
