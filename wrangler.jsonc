@@ -5,5 +5,9 @@
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"
-  }
+  },
+  "routes": [
+    { "pattern": "tgsconstruccion.cl/*", "zone_name": "tgsconstruccion.cl" },
+    { "pattern": "www.tgsconstruccion.cl/*", "zone_name": "tgsconstruccion.cl" }
+  ]
 }
