@@ -17,7 +17,7 @@ interface Props {
   tipos: Tipo[];
   faq: { q: string; a: string }[];
   galeria?: { src: string; alt: string }[];
-  intro?: { h2: string; parrafos: string[]; items: string[]; chip: string; img?: string; video?: string; poster?: string };
+  intro?: { h2: string; parrafos: string[]; items: string[]; pasos?: { t: string; d: string }[]; chip: string; img?: string; video?: string; poster?: string };
   precios?: Precios;
 }
 const { title, description, eyebrow, h1, lead, img, h2tipos, tipos, faq, galeria = [], intro, precios } = Astro.props;
@@ -69,6 +69,19 @@ const faqSchema = {
             : introImg && <img src={introImg} alt={introAlt} loading="lazy" />}
         </figure>
       </div>
+      {intro.pasos && (
+        <div class="wrap">
+          <div class="pasos">
+            {intro.pasos.map((p, i) => (
+              <div class="pasos__i">
+                <span class="pasos__n">{String(i + 1).padStart(2, '0')}</span>
+                <h3>{p.t}</h3>
+                <p>{p.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   )}
   {precios && (
