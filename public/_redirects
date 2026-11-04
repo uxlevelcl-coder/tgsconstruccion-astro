@@ -17,3 +17,9 @@
 # WordPress sobrantes
 /feed/                /blog/  301
 /wp-login.php         /  301
+
+# Páginas vivas que no tienen equivalente en Astro
+/nuestros-servicios/            /  301
+/categoria/guias-y-consejos/    /blog/  301
+/interiores/                    /  301
+/home/tgs-construccion-04/      /  301
