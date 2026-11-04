@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+---
+<Base
+  hero={false}
+  title="Página no encontrada | TGS Construcción"
+  description="La página que busca no existe o cambió de dirección. Vuelva al inicio o escríbanos por WhatsApp y le respondemos en el día."
+>
+  <Fragment slot="head"><meta name="robots" content="noindex, follow" /></Fragment>
+
+  <section class="n404">
+    <div class="wrap">
+      <p class="n404__code">404</p>
+      <h1>Esta página ya no está</h1>
+      <p class="n404__txt">
+        Puede que el enlace haya cambiado o que la dirección esté mal escrita.
+        Esto es lo que busca la mayoría de nuestros clientes.
+      </p>
+
+      <div class="n404__links">
+        <a href="/" class="btn btn--dark">Ir al inicio</a>
+        <a href="/remodelacion-de-banos/" class="btn">Baños</a>
+        <a href="/remodelacion-cocinas/" class="btn">Cocinas</a>
+        <a href="/construccion-de-terrazas/" class="btn">Terrazas</a>
+        <a href="/construccion-quinchos/" class="btn">Quinchos</a>
+        <a href="/portafolio/" class="btn">Portafolio</a>
+      </div>
+
+      <p class="n404__wa">
+        ¿Prefiere hablar con alguien?
+        <a href={`https://wa.me/${site.empresa.whatsapp}`} target="_blank" rel="noopener">Escríbanos por WhatsApp</a>
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .n404{padding:clamp(72px,10vw,140px) 0 clamp(80px,11vw,150px);background:var(--paper)}
+  .n404__code{
+    font-family:var(--mono);font-size:13px;letter-spacing:.22em;color:var(--gold-deep);
+    margin-bottom:18px;text-transform:uppercase
+  }
+  .n404 h1{font-size:clamp(32px,4.6vw,58px);line-height:1.06;letter-spacing:-.02em;max-width:22ch}
+  .n404__txt{color:var(--body);font-size:17px;max-width:56ch;margin-top:18px}
+  .n404__links{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+  .n404__links .btn{font-size:14px;padding:11px 18px}
+  .n404__wa{margin-top:30px;font-size:15px;color:var(--muted)}
+  .n404__wa a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:560px){ .n404__links .btn{flex:1 1 auto;text-align:center} }
+</style>

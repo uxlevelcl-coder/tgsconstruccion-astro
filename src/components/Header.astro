@@ -4,7 +4,7 @@ const ruta = Astro.url.pathname;
 const activo = (u) => u === '/' ? ruta === '/' : ruta.startsWith(u);
 ---
 <script is:inline>
-  if (window.scrollY < 24) document.documentElement.classList.add('at-top');
+  if (!document.documentElement.classList.contains('sin-hero') && window.scrollY < 24) document.documentElement.classList.add('at-top');
 </script>
 <!-- nav flotante -->
 <div class="hdwrap">
@@ -74,7 +74,8 @@ const activo = (u) => u === '/' ? ruta === '/' : ruta.startsWith(u);
 
 <script>
   (() => {
-    const marcarArriba = () => document.documentElement.classList.toggle('at-top', window.scrollY < 24);
+    const sinHero = document.documentElement.classList.contains('sin-hero');
+    const marcarArriba = () => document.documentElement.classList.toggle('at-top', !sinHero && window.scrollY < 24);
     marcarArriba();
     window.addEventListener('scroll', marcarArriba, { passive: true });
     window.addEventListener('resize', marcarArriba);

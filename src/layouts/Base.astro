@@ -8,13 +8,14 @@ interface Props {
   description: string;
   canonical?: string;
   image?: string;
+  hero?: boolean;
 }
-const { title, description, canonical, image } = Astro.props;
+const { title, description, canonical, image, hero = true } = Astro.props;
 const url = canonical ?? new URL(Astro.url.pathname, Astro.site);
 const ogImage = image ?? '/img/foto_04-scaled.webp';
 ---
 <!DOCTYPE html>
-<html lang="es-CL">
+<html lang="es-CL" class={hero ? undefined : 'sin-hero'}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
