@@ -2,11 +2,11 @@
 import ServiceLanding from '../components/ServiceLanding.astro';
 ---
 <ServiceLanding
-  title="Construcción de Terrazas en Santiago | TGS Construcción"
-  description="Construcción de terrazas techadas y descubiertas en Santiago. Diseño, permisos, estructura e instalaciones. Presupuesto sin costo en 24 horas."
+  title="Construcción de Terrazas en Santiago: Precio y Plazos 2026"
+  description="Cuánto cuesta construir una terraza en Santiago: rangos por tipo, qué incluye cada uno y plazos reales. Presupuesto sin costo en 24 horas."
   eyebrow="Construcción de terrazas"
   h1="Construcción de terrazas en Santiago"
-  lead="Espacios exteriores que extienden su casa hacia el aire libre. Diseñamos, tramitamos los permisos y construimos con materiales de primera calidad."
+  lead="Espacios exteriores que extienden su casa hacia el aire libre. Rangos de precio claros, permisos gestionados y un solo responsable de principio a fin."
   img="/img/Remodelacion-de-terraza-a-medida-scaled.webp"
   h2tipos="Tipos de terraza que construimos"
   tipos={[
@@ -14,25 +14,43 @@ import ServiceLanding from '../components/ServiceLanding.astro';
     { t: 'Terraza descubierta', ico: 'sol', d: 'La opción más económica: piso, baranda y terminaciones para ganar metros exteriores.' },
     { t: 'Deck y pérgola', ico: 'deck', d: 'Madera o composite con pérgola de listones: cálido, liviano y rápido de instalar.' },
   ]}
+  precios={{
+    titulo: 'Cuánto cuesta construir una terraza en Santiago',
+    filas: [
+      { tipo: 'Terraza descubierta', rango: '$1.500.000 – $2.500.000', incluye: 'Piso, baranda y terminaciones. Sin cubierta: se usa en verano y con buen tiempo.' },
+      { tipo: 'Terraza con pérgola', rango: '$2.500.000 – $4.000.000', incluye: 'Piso, estructura y pérgola de listones de madera o metalcon. Sombra sin cerrar el espacio.' },
+      { tipo: 'Terraza techada', rango: '$4.000.000 – $6.000.000', incluye: 'Cubierta firme con estructura propia, canaletas de aguas lluvia e iluminación. Se usa todo el año.' },
+      { tipo: 'Sobre 30 m² o con quincho', rango: '$6.000.000 o más', incluye: 'Terraza amplia, o terraza integrada con quincho, parrilla y mesón en un mismo proyecto.' },
+    ],
+    nota: 'Valores referenciales para terrazas de 15 a 30 m² en la Región Metropolitana, revisados en 2026. El presupuesto final depende del terreno, de si hay que nivelar o fundar, y de los materiales elegidos. La visita y el presupuesto son sin costo.',
+  }}
   faq={[
-    { q: '¿Cuánto demora construir una terraza?', a: 'Una terraza descubierta toma entre 2 y 3 semanas. Con cubierta y permisos, entre 4 y 6 semanas.' },
-    { q: '¿Necesito permiso municipal?', a: 'Si la terraza es techada y supera cierto metraje, sí. Nosotros gestionamos el permiso en la municipalidad correspondiente.' },
-    { q: '¿Qué materiales usan?', a: 'Estructura de madera tratada o metalcon según el caso, cubiertas de policarbonato, teja o zinc, y pisos de porcelanato, deck o cerámica.' },
-    { q: '¿Ofrecen garantía?', a: 'Sí, con garantía por escrito sobre estructura e instalaciones.' },
+    { q: '¿Cuánto cuesta construir una terraza en Santiago?', a: 'Una terraza descubierta de 15 a 30 m², con piso, baranda y terminaciones, se mueve entre $1.500.000 y $2.500.000. Con pérgola, entre $2.500.000 y $4.000.000. Techada con cubierta firme, entre $4.000.000 y $6.000.000. Sobre 30 m² o integrada con quincho, desde $6.000.000.' },
+    { q: '¿Cuánto demora construir una terraza?', a: 'Una terraza descubierta toma entre 2 y 3 semanas. Con cubierta y permiso municipal, entre 4 y 6 semanas, considerando el tiempo del trámite.' },
+    { q: '¿Necesito permiso municipal?', a: 'Una terraza descubierta a nivel de piso normalmente no lo requiere. Una terraza techada con estructura y cubierta sí, en la mayoría de las comunas. Lo confirmamos en la Dirección de Obras antes de presupuestar y gestionamos el trámite cuando corresponde.' },
+    { q: '¿Techada o descubierta?', a: 'Si la terraza se va a usar en invierno o en la noche, la cubierta se paga sola: protege del rocío, de la lluvia y del sol directo. Si el uso es de fin de semana en verano, una descubierta con pérgola de sombra cuesta la mitad.' },
+    { q: '¿Qué materiales usan?', a: 'Estructura de madera tratada o metalcon según el caso, cubiertas de policarbonato, teja asfáltica o zinc, y pisos de porcelanato, deck de madera o composite.' },
+    { q: '¿Madera tratada o metalcon?', a: 'La madera tratada es más cálida a la vista y más fácil de trabajar en terreno irregular. El metalcon no se deforma con la humedad y aguanta mejor el paso del tiempo a la intemperie. En cubiertas grandes, el metalcon suele ser la opción más segura.' },
+    { q: '¿Cómo se resuelve el drenaje?', a: 'Con pendiente calculada hacia el desagüe o hacia el borde, y canaletas cuando la cubierta recibe agua de la casa. Una terraza sin pendiente junta agua en el centro y termina filtrando hacia la fundación.' },
+    { q: '¿Se puede construir sobre terreno natural, sin losa?', a: 'Sí, con fundaciones puntuales y un radier o piso flotante según el uso. Es lo habitual en casas con patio de tierra, y se resuelve antes de cualquier terminación.' },
+    { q: '¿Ofrecen garantía?', a: 'Sí. Los trabajos quedan con garantía por escrito, respaldada en el contrato, incluyendo estructura, cubierta, impermeabilización e instalaciones.' },
   ]}
   intro={{
-    h2: 'Amplía tu espacio de vida',
+    h2: 'Una terraza se decide en el drenaje y en la cubierta',
     parrafos: [
-      'Una terraza bien diseñada no solo aumenta el valor de tu propiedad, sino que crea un espacio invaluable para disfrutar el aire libre, compartir con familia y amigos, y conectar con la naturaleza desde la comodidad de tu hogar.',
-      'Nuestro equipo especializado en construcción de terrazas combina diseño arquitectónico, ingeniería estructural y materiales de primera calidad para crear espacios exteriores duraderos y estéticamente impecables.',
+      'Lo que define si una terraza dura no se ve en la foto: es la pendiente. Una terraza mal nivelada junta agua en el centro, y en dos inviernos esa agua llega a la fundación de la casa. Antes de elegir el piso, calculamos hacia dónde escurre el agua.',
+      'Después viene la decisión de fondo: descubierta, con pérgola o techada. Una descubierta cuesta la mitad, pero se usa solo con buen tiempo. La pérgola da sombra sin cerrar el espacio. Y la cubierta firme, con estructura propia y canaletas, convierte la terraza en un espacio que se usa todo el año, incluso de noche.',
+      'Los materiales cambian según el terreno. Sobre losa existente se puede trabajar con porcelanato o deck directamente. Sobre terreno natural hay que resolver fundaciones puntuales y un radier antes de cualquier terminación, y eso es lo que más mueve el presupuesto de un proyecto a otro.',
+      'Una terraza descubierta toma entre 2 y 3 semanas. Con cubierta y permiso municipal, entre 4 y 6. El trámite se pide antes de empezar, no en paralelo, para no quedar con la obra detenida.',
+      'Trabajamos en toda la Región Metropolitana, tanto en casas con patio como en departamentos con terraza sobre losa. Un solo responsable coordina estructura, cubierta, instalaciones y terminaciones.',
     ],
     items: [
-      'Diseño arquitectónico personalizado',
-      'Materiales resistentes a la intemperie',
-      'Deck de madera, composite o porcelanato',
-      'Pérgolas y techumbres modernas',
-      'Iluminación LED exterior',
-      'Sistemas de drenaje eficientes',
+      'Pendiente y drenaje calculados antes del piso',
+      'Estructura de madera tratada o metalcon',
+      'Cubiertas de policarbonato, teja asfáltica o zinc',
+      'Pisos de porcelanato, deck o composite',
+      'Canaletas de aguas lluvia e iluminación LED exterior',
+      'Permiso municipal gestionado cuando corresponde',
     ],
     video: '/img/proy_04_web.mp4',
     poster: '/img/proy_04_web.jpg',

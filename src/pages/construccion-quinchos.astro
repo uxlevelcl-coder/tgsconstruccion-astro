@@ -2,11 +2,11 @@
 import ServiceLanding from '../components/ServiceLanding.astro';
 ---
 <ServiceLanding
-  title="Construcción de Quinchos en Santiago | TGS Construcción"
-  description="Construcción de quinchos a medida en Santiago: parrilla, campana, mesón y pérgola. Proyecto llave en mano y presupuesto sin costo en 24 horas."
+  title="Construcción de Quinchos en Santiago: Precio y Plazos 2026"
+  description="Cuánto cuesta construir un quincho en Santiago: rangos por terminación, qué incluye cada uno y plazos reales. Presupuesto sin costo en 24 horas."
   eyebrow="Construcción de quinchos"
   h1="Construcción de quinchos en Santiago"
-  lead="El lugar donde se juntan los domingos. Diseñamos y construimos quinchos que se adaptan a su terreno, su presupuesto y su forma de recibir."
+  lead="El lugar donde se juntan los domingos. Rangos de precio claros, diseño adaptado a su terreno y un solo responsable de la parrilla a la entrega."
   img="/img/construccion-de-quinchos-a-medida-scaled.webp"
   h2tipos="Tipos de quincho que construimos"
   tipos={[
@@ -14,25 +14,43 @@ import ServiceLanding from '../components/ServiceLanding.astro';
     { t: 'Quincho abierto con pérgola', ico: 'pergola', d: 'Estructura y cubierta con lados abiertos: la opción más usada para asados.' },
     { t: 'Parrilla, campana y mesón', ico: 'parrilla', d: 'Equipamiento de obra: parrilla de ladrillo, campana extractora y mesón de granito.' },
   ]}
+  precios={{
+    titulo: 'Cuánto cuesta construir un quincho en Santiago',
+    filas: [
+      { tipo: 'Quincho básico', rango: '$4.000.000 – $8.000.000', incluye: 'Parrilla de obra, mesón, piso, estructura y cubierta. Lados abiertos, sin cerramiento.' },
+      { tipo: 'Quincho equipado', rango: '$8.000.000 – $12.000.000', incluye: 'Lo anterior más campana extractora, lavaplatos, instalación de gas, iluminación y enchufes.' },
+      { tipo: 'Quincho cerrado', rango: '$12.000.000 – $15.000.000', incluye: 'Muros, ventanas y puertas: se usa todo el año, independiente del clima y de los mosquitos.' },
+      { tipo: 'Sobre 30 m² o alto estándar', rango: '$15.000.000 o más', incluye: 'Fachada vista, porcelanato, cubierta de teja o zinc, equipamiento de acero inoxidable.' },
+    ],
+    nota: 'Valores referenciales para un quincho de 20 a 30 m² en la Región Metropolitana, revisados en 2026. El presupuesto final depende del terreno, de los materiales y del equipamiento elegido. La visita y el presupuesto son sin costo.',
+  }}
   faq={[
-    { q: '¿Cuánto demora construir un quincho?', a: 'Entre 4 y 8 semanas según tamaño, cubierta e instalaciones.' },
-    { q: '¿Se necesitan permisos municipales?', a: 'Cuando el quincho es una obra con estructura y cubierta, normalmente sí. Nos encargamos del trámite.' },
-    { q: '¿Incluye parrilla y campana?', a: 'Sí, el equipamiento de obra es parte del proyecto: parrilla, campana, mesón y las instalaciones de gas y agua.' },
-    { q: '¿Trabajan en toda la Región Metropolitana?', a: 'Sí: Ñuñoa, Providencia, Las Condes, Huechuraba, Buin, Paine, San Bernardo y comunas de la Región Metropolitana.' },
+    { q: '¿Cuánto cuesta construir un quincho en Santiago?', a: 'Un quincho básico de 20 a 30 m², con parrilla de obra, mesón, piso y cubierta, se mueve entre $4.000.000 y $8.000.000. Equipado con campana, lavaplatos y electricidad, entre $8.000.000 y $12.000.000. Cerrado con muros y ventanas, entre $12.000.000 y $15.000.000. Sobre 30 m² o con terminación de alto estándar, desde $15.000.000.' },
+    { q: '¿Cuánto demora construir un quincho?', a: 'Entre 4 y 8 semanas según tamaño, cubierta e instalaciones. Un quincho abierto con pérgola se resuelve en 4 a 5 semanas; uno cerrado con ventanales y gas, en 6 a 8.' },
+    { q: '¿Se necesitan permisos municipales?', a: 'Depende de la comuna y de la superficie: una obra menor normalmente no lo requiere, pero un quincho con estructura y cubierta que supera cierto metraje sí. Lo confirmamos en la Dirección de Obras de la comuna antes de presupuestar y, si corresponde, gestionamos el trámite.' },
+    { q: '¿Incluye parrilla y campana?', a: 'Sí. El equipamiento de obra es parte del proyecto: parrilla, campana, mesón y las instalaciones de gas y agua. Si usted ya tiene la parrilla, la adaptamos al proyecto.' },
+    { q: '¿Conviene parrilla de ladrillo o de acero?', a: 'El ladrillo refractario acumula calor y dura décadas, pero no se puede mover. El acero inoxidable es más rápido de encender y fácil de limpiar, aunque no retiene el calor igual. Para asado de fin de semana, el ladrillo suele ser la mejor inversión.' },
+    { q: '¿Por qué se llena de humo un quincho?', a: 'Casi siempre por el tiro mal calculado: la campana es más chica que la boca de la parrilla, o queda más baja que el punto de descarga. La altura y la sección del ducto se calculan antes de construir, no después.' },
+    { q: '¿Puedo dejar el quincho abierto y cerrarlo después?', a: 'Se puede, pero sale más caro que hacerlo de una vez. Si existe la posibilidad de cerrarlo más adelante, conviene dejar la estructura y las fundaciones preparadas desde el inicio.' },
+    { q: '¿Trabajan fuera de Santiago?', a: 'Sí. Trabajamos en toda la Región Metropolitana: Ñuñoa, Providencia, Las Condes, Huechuraba, Buin, Paine, San Bernardo, Calera de Tango, Talagante y Peñaflor, entre otras comunas.' },
+    { q: '¿Ofrecen garantía?', a: 'Sí. Los trabajos quedan con garantía por escrito, respaldada en el contrato, incluyendo estructura, cubierta e instalaciones de gas y agua.' },
   ]}
   intro={{
-    h2: 'Quinchos a medida en Santiago',
+    h2: 'Un quincho se define por el tiro, no por la cubierta',
     parrafos: [
-      'En TGS Construcción diseñamos y construimos quinchos que se adaptan a tu terreno, tu presupuesto y tu estilo de vida. Trabajamos en Ñuñoa, Providencia, Las Condes, Huechuraba y todo Santiago.',
-      'Cada proyecto incluye diseño personalizado, materiales de primera calidad y un equipo que te acompaña desde la idea inicial hasta la entrega final. Sin sorpresas, sin costos ocultos.',
+      'La mayoría de los quinchos que se ven mal no tienen un problema de diseño: tienen un problema de humo. La campana es más chica que la boca de la parrilla, o el ducto queda bajo y el aire caliente no alcanza a salir. Por eso en cada proyecto calculamos la sección y la altura del tiro antes de poner la primera piedra.',
+      'Lo segundo es decidir si el quincho va abierto o cerrado. Abierto con pérgola es la opción más usada y la más económica, pero depende del clima y de los mosquitos. Cerrado se usa todo el año, y si existe la posibilidad de cerrarlo más adelante, conviene dejar la estructura y las fundaciones preparadas desde el principio.',
+      'La parrilla también define el proyecto. El ladrillo refractario acumula calor y dura décadas, aunque no se puede mover si algún día cambia el quincho de lugar. El acero inoxidable enciende más rápido y se limpia fácil, pero no retiene el calor igual. Para asado de fin de semana, el ladrillo suele rendir mejor.',
+      'Un quincho abierto con pérgola toma entre 4 y 5 semanas. Uno cerrado, con ventanales, gas y electricidad, entre 6 y 8. En ese plazo entran la fundación, la estructura, la cubierta, la parrilla, el mesón, las instalaciones y las terminaciones.',
+      'Trabajamos en toda la Región Metropolitana: Ñuñoa, Providencia, Las Condes, Huechuraba, Buin, Paine, San Bernardo, Calera de Tango, El Monte, Talagante, Peñaflor e Isla de Maipo. Un solo responsable coordina albañilería, gasfitería, electricidad y terminaciones.',
     ],
     items: [
-      'Diseño arquitectónico funcional y estético',
-      'Parrillas de acero inoxidable o ladrillo',
-      'Techumbres resistentes al clima',
-      'Áreas de cocina y preparación',
-      'Iluminación ambiental y funcional',
-      'Mobiliario integrado y almacenamiento',
+      'Tiro y campana calculados antes de construir',
+      'Parrilla de ladrillo refractario o de acero inoxidable',
+      'Estructura y cubierta para el clima de Santiago',
+      'Mesón de granito, instalación de gas y lavaplatos',
+      'Iluminación LED y enchufes para el asador',
+      'Fundaciones preparadas si se piensa cerrar después',
     ],
     video: '/img/proy_01_final.mp4',
     poster: '/img/proy_01_final.jpg',
