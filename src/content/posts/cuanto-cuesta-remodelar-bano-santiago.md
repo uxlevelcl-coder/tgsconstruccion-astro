@@ -33,7 +33,7 @@ Valores aproximados para una remodelación completa en Santiago, Ñuñoa, Provid
 
 Así se distribuye aproximadamente el presupuesto en una remodelación completa de baño de 5 m² en Santiago:
 
-![Baño remodelado con vanitorio y espejo retroiluminado — TGS Construcción](/img/bano-real-1.webp)
+![Muestras de cerámica y porcelanato para remodelación de baño — TGS Construcción](/img/ChatGPT-Image-1-jul-2026-05_19_25-p.m.webp)
 
 ## ¿Vale la pena remodelar el baño?
 
@@ -43,7 +43,7 @@ Además, los baños antiguos suelen tener problemas ocultos: filtraciones que da
 
 ## 5 consejos para ahorrar en tu remodelación
 
-![Baño remodelado con mampara de vidrio y espejo de gota — TGS Construcción](/img/bano-real-2.webp)
+![Baño amplio con tina independiente, luz natural y plantas — TGS Construcción Santiago](/img/ChatGPT-Image-1-jul-2026-05_15_21-p.m.webp)
 
 ## ¿Por qué elegir TGS Construcción?
 

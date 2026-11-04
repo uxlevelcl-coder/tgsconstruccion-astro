@@ -23,13 +23,13 @@ En TGS fabricamos quinchos para asados a la medida, combinando los materiales y 
 
 Cuando trabajamos con usted, el presupuesto es transparente e incluye todo lo necesario para que el quincho quede funcionando:
 
-![Quincho terminado con parrilla, campana y muebles de madera](/img/quincho.webp)
+![Interior de quincho con parrilla de ladrillo, mesón de granito y cerámica en muros](/img/Quincho_barbecue_interior_with_g__2K_202609091453_e0c134.webp)
 
 ## ¿Qué factores influyen en el precio final?
 
 Cada patio es distinto y eso se refleja en el presupuesto. Los factores que más influyen son:
 
-![Quincho y piscina terminados en una casa de Santiago](/img/foto_02.webp)
+![Familia chilena disfrutando un asado en un quincho durante el verano](/img/Family_having_barbecue_gathering_2K_202609091453_ce9f73.webp)
 
 ## ¿Es una buena inversión?
 

@@ -7,7 +7,7 @@ image: "/img/blog/permiso-municipal-remodelar-casa-santiago.webp"
 
 Una de las preguntas más comunes antes de empezar una remodelación es: **¿necesito permiso municipal?** La respuesta corta: depende del tipo de obra. En esta guía te explicamos cuándo sí, cuándo no, y cómo hacer el trámite en Santiago.
 
-![Remodelación en ejecución: retiro de revestimientos antes de instalar](/img/obra-antes.webp)
+![Planos de remodelación y permisos municipales — TGS Construcción](/img/ChatGPT-Image-13-jul-2026-12_07_38-p.m.webp)
 
 ## Lo que dice la ley chilena
 
@@ -37,7 +37,7 @@ Depende del acuerdo. En general:
 
 ## Consejos antes de empezar
 
-![Patio y terraza terminados tras la remodelación](/img/obra-terminada.webp)
+![Barrio residencial en Santiago con letrero de obra — TGS Construcción](/img/ChatGPT-Image-13-jul-2026-12_24_21-p.m.webp)
 
 ¿Tenés dudas sobre tu proyecto? Solicita tu presupuesto sin costo →
 
