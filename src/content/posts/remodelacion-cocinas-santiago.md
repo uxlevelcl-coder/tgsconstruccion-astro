@@ -59,7 +59,7 @@ Antes de elegir campana conviene revisar el reglamento de copropiedad: hay edifi
 
 ### Agua y desagües
 
-Mover el fregadero a una isla o a un muro opuesto exige estudiar la pendiente del desagüe. Sin pendiente suficiente, el agua se estanca y aparecen los olores. Cuando la distancia es grande, hay que evaluar soluciones mecánicas o cambiar la ubicación del proyecto.
+Mover el lavaplatos a una isla o a un muro opuesto exige estudiar la pendiente del desagüe. Sin pendiente suficiente, el agua se estanca y aparecen los olores. Cuando la distancia es grande, hay que evaluar soluciones mecánicas o cambiar la ubicación del proyecto.
 
 Un detalle que se olvida: la llave de paso de la cocina. Debe quedar accesible, no escondida detrás del mueble bajo.
 
@@ -78,7 +78,7 @@ Una cocina puede tener los mejores materiales y seguir siendo incómoda si las d
 
 ### El triángulo de trabajo
 
-El diseño funcional se ordena en torno a tres puntos: **refrigerador, fregadero y zona de cocción**. La distancia total entre los tres debiera quedar entre 3,5 y 6 metros: menos obliga a girar sobre el mismo lugar, más agrega pasos innecesarios.
+El diseño funcional se ordena en torno a tres puntos: **refrigerador, lavaplatos y zona de cocción**. La distancia total entre los tres debiera quedar entre 3,5 y 6 metros: menos obliga a girar sobre el mismo lugar, más agrega pasos innecesarios.
 
 Dos medidas que se notan todos los días: la altura del mesón (alrededor de 90 cm, ajustable según la estatura del usuario principal) y la profundidad de los muebles altos, que si son muy profundos hacen perder el fondo.
 

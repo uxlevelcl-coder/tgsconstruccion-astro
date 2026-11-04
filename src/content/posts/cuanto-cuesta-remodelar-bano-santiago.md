@@ -30,7 +30,7 @@ Aquí está la diferencia más grande de todas. Cambiar solo la cerámica es un 
 - **Cosmética**: cerámica, pintura y artefactos en la misma posición. Es la opción más económica y la que menos interrumpe la casa.
 - **Parcial**: cerámica, grifería y artefactos nuevos, más mueble. No se mueven las instalaciones.
 - **Completa**: se interviene el piso, se impermeabiliza de nuevo y se cambian las terminaciones.
-- **Con cambio de plomería**: se mueven puntos de agua y desagüe, se cambia la red y se rehace la pendiente.
+- **Con cambio de gasfitería**: se mueven puntos de agua y desagüe, se cambia la red y se rehace la pendiente.
 
 Cada escalón agrega días de obra y agrega partidas. La diferencia entre una cosmética y una completa puede ser de tres a cinco veces el presupuesto.
 
@@ -51,7 +51,7 @@ Para un baño de 4 a 5 m² en la Región Metropolitana, estos son los rangos que
 | Cambio de cerámica solamente | $400.000 – $900.000 |
 | Remodelación parcial (cerámica, grifería y artefactos) | $800.000 – $1.800.000 |
 | Remodelación completa sin cambiar la distribución | $1.200.000 – $2.500.000 |
-| Remodelación con cambio de plomería | $2.500.000 – $4.500.000 |
+| Remodelación con cambio de gasfitería | $2.500.000 – $4.500.000 |
 | Baño de diseño premium | $4.500.000 o más |
 
 Son valores referenciales y no una cotización: el presupuesto exacto depende de las medidas reales, del estado de las instalaciones y de los materiales que usted elija. En la página de [remodelación de baños en Santiago](/remodelacion-de-banos/) está el detalle de qué incluye cada tipo de trabajo, cuánto demora y cómo se pide el presupuesto sin costo.
