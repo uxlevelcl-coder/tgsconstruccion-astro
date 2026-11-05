@@ -45,8 +45,9 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="ft__bottom">
-      <span>© {year} {site.empresa.nombre}</span>
-      <span>Santiago, Chile · <a class="ft__credito" href="https://uxlevel.cl" target="_blank" rel="noopener">Desarrollado y diseñado por UXLEVEL</a></span>
+      <span>© {year} {site.empresa.razonSocial} · RUT {site.empresa.rut}</span>
+      <span>{site.empresa.direccion}</span>
+      <span><a class="ft__credito" href="/privacidad/">Política de privacidad</a> · <a class="ft__credito" href="https://uxlevel.cl" target="_blank" rel="noopener">Desarrollado y diseñado por UXLEVEL</a></span>
     </div>
   </div>
 </footer>

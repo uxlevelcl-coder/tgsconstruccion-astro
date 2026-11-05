@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+const e = site.empresa;
+---
+<Base
+  title="Política de Privacidad | TGS Construcción"
+  description="Cómo trata TGS Construcción los datos personales que recibe por el sitio web y por WhatsApp, y cómo ejercer sus derechos."
+  hero={false}
+>
+  <section class="section">
+    <div class="wrap legal">
+      <span class="eyebrow">Legal</span>
+      <h1>Política de Privacidad</h1>
+      <p class="legal__fecha">{e.privacidad}</p>
+
+      <h2>Quién es el responsable</h2>
+      <p>
+        El responsable del tratamiento de sus datos es <strong>{e.razonSocial}</strong>, RUT {e.rut},
+        con domicilio en {e.direccion}. Para cualquier consulta sobre esta política puede escribir a
+        <a href={`mailto:${e.email}`}>{e.email}</a> o al WhatsApp {e.telefono}.
+      </p>
+
+      <h2>Qué datos tratamos</h2>
+      <ul>
+        <li><strong>Los que usted nos entrega en el formulario:</strong> nombre, comuna, tipo de obra y la descripción del proyecto.</li>
+        <li><strong>Los que nos envía por WhatsApp:</strong> su número, su nombre de perfil y el contenido de la conversación.</li>
+        <li><strong>Datos de navegación:</strong> páginas vistas, origen de la visita, dispositivo y ciudad aproximada, medidos de forma agregada con Google Analytics 4.</li>
+      </ul>
+      <p>No pedimos datos sensibles, no pedimos datos de menores de edad y no solicitamos información financiera por este sitio.</p>
+
+      <h2>Para qué los usamos</h2>
+      <ul>
+        <li>Responder su solicitud y enviarle un presupuesto.</li>
+        <li>Coordinar la visita y, si contrata, ejecutar y entregar la obra.</li>
+        <li>Entender qué páginas del sitio sirven y cuáles no, para mejorarlo.</li>
+      </ul>
+      <p>No usamos sus datos para publicidad de terceros ni los vendemos.</p>
+
+      <h2>Base legal</h2>
+      <p>
+        Tratamos sus datos sobre la base de su consentimiento, que usted otorga al marcar la casilla
+        del formulario, y del interés legítimo de responder una solicitud comercial que usted inició.
+      </p>
+
+      <h2>Con quién se comparten</h2>
+      <p>
+        Sus datos no se venden ni se ceden a terceros ajenos a la prestación del servicio. Intervienen
+        solo proveedores tecnológicos que actúan como encargados:
+      </p>
+      <ul>
+        <li><strong>Google Ireland Limited</strong>, por Google Analytics 4 y Google Tag Manager, con datos de navegación agregados.</li>
+        <li><strong>Meta Platforms</strong>, cuando usted decide escribirnos por WhatsApp: el mensaje se envía desde su propia cuenta y queda en esa conversación.</li>
+        <li><strong>Cloudflare</strong>, por el alojamiento del sitio web.</li>
+      </ul>
+
+      <h2>Cuánto tiempo los conservamos</h2>
+      <p>
+        Las conversaciones y solicitudes se conservan mientras exista una relación comercial o un
+        interés concreto en la obra consultada, y después por un plazo máximo de 24 meses. Cumplido
+        ese plazo se eliminan. Los datos de navegación de Google Analytics se conservan por 14 meses.
+      </p>
+
+      <h2>Sus derechos</h2>
+      <p>
+        Usted puede pedir en cualquier momento el acceso a sus datos, su rectificación, su supresión,
+        su portabilidad y oponerse a su tratamiento. Para ejercerlos escriba a
+        <a href={`mailto:${e.email}`}>{e.email}</a> indicando su nombre y el derecho que desea ejercer.
+      </p>
+      <p>
+        Respondemos dentro de los plazos que fija la Ley 21.719. Si no queda conforme con la respuesta,
+        puede recurrir a la Agencia de Protección de Datos Personales.
+      </p>
+
+      <h2>Cookies y medición</h2>
+      <p>
+        El sitio usa cookies de medición de Google Analytics para contar visitas y saber de dónde llegan.
+        No usamos cookies de publicidad. Puede bloquear o borrar estas cookies desde la configuración de
+        su navegador: el sitio sigue funcionando igual.
+      </p>
+
+      <h2>Seguridad</h2>
+      <p>
+        El sitio se sirve sobre HTTPS y el acceso a las solicitudes está restringido a las personas que
+        atienden el negocio. El formulario no envía nada a un servidor propio: compone el mensaje y lo
+        abre en su WhatsApp, de modo que usted ve el texto completo antes de enviarlo.
+      </p>
+
+      <h2>Cambios a esta política</h2>
+      <p>
+        Si cambia la forma en que tratamos los datos, actualizaremos esta página y su fecha. La versión
+        vigente es la que aparece publicada aquí.
+      </p>
+
+      <p class="legal__volver"><a href="/contacto/">Volver a contacto</a></p>
+    </div>
+  </section>
+
+  <style>
+    .legal{max-width:760px}
+    .legal h1{font-size:clamp(30px,4vw,42px);line-height:1.15;margin:6px 0 10px}
+    .legal__fecha{margin:0 0 34px;font-size:13.5px;color:var(--muted);font-family:var(--mono)}
+    .legal h2{font-size:19px;margin:34px 0 10px}
+    .legal p,.legal li{color:var(--body);font-size:15.5px;line-height:1.7}
+    .legal p{margin:0 0 12px}
+    .legal ul{margin:0 0 14px;padding-left:20px;display:grid;gap:7px}
+    .legal a{color:var(--gold-deep)}
+    .legal__volver{margin-top:38px;padding-top:22px;border-top:1px solid var(--line);font-weight:500}
+  </style>
+</Base>
