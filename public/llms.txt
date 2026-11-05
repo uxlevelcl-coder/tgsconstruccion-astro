@@ -36,6 +36,7 @@ El presupuesto no se calcula por metro cuadrado y no hay tarifas fijas publicada
 - [Nosotros](https://tgsconstruccion.cl/nosotros/): cómo trabaja el equipo, qué oficios coordina y qué compromisos mantiene en cada obra.
 - [Contacto](https://tgsconstruccion.cl/contacto/): formulario que compone un mensaje de WhatsApp y tarjetas con zonas y horario.
 - [Política de privacidad](https://tgsconstruccion.cl/privacidad/): tratamiento de datos personales conforme a la Ley 21.719.
+- [Términos y condiciones](https://tgsconstruccion.cl/terminos/): presupuestos, plazos, pagos, cambios, garantía y cancelaciones.
 
 ## Datos de contacto
 

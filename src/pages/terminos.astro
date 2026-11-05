@@ -1,0 +1,153 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+const e = site.empresa;
+---
+<Base
+  title="Términos y Condiciones | TGS Construcción"
+  description="Condiciones generales de los servicios de remodelación y construcción de TGS Construcción: presupuestos, plazos, pagos, cambios, garantía y cancelaciones."
+  hero={false}
+>
+  <section class="section">
+    <div class="wrap legal">
+      <span class="eyebrow">Legal</span>
+      <h1>Términos y Condiciones</h1>
+      <p class="legal__fecha">Última actualización: noviembre de 2026</p>
+
+      <p class="legal__intro">
+        Estas condiciones rigen los servicios de remodelación y construcción que presta
+        <strong>{e.razonSocial}</strong>. Cada trabajo se contrata con su propio presupuesto aceptado
+        por escrito, y ese documento prevalece sobre estas condiciones generales en lo que se refiera
+        al alcance, los plazos y el precio de esa obra.
+      </p>
+
+      <h2>1. Quién presta el servicio</h2>
+      <p>
+        {e.razonSocial}, RUT {e.rut}, con domicilio en {e.direccion}. Contacto:
+        <a href={`mailto:${e.email}`}>{e.email}</a> y WhatsApp {e.telefono}.
+      </p>
+
+      <h2>2. Alcance de los servicios</h2>
+      <p>
+        Ejecutamos remodelación de baños, cocinas, quinchos y terrazas, junto con las partidas asociadas
+        de gasfitería, electricidad, revestimientos, muebles y pintura. El detalle de lo que incluye cada
+        obra queda en el presupuesto aceptado. Lo que no aparece en ese documento no está incluido.
+      </p>
+
+      <h2>3. Presupuestos</h2>
+      <ul>
+        <li>La visita y el presupuesto son sin costo y se entregan en un plazo de 24 horas desde la visita, salvo que se acuerde otra cosa.</li>
+        <li>El presupuesto se detalla por partida, con materiales y plazos indicados.</li>
+        <li>Tiene una vigencia de 15 días hábiles desde su emisión. Pasado ese plazo, los valores pueden actualizarse.</li>
+        <li>No incluye permisos municipales, derechos de edificación ni trámites ante organismos públicos, salvo que se indiquen expresamente.</li>
+        <li>Los precios publicados en el sitio web son referenciales. El precio aplicable es el del presupuesto aceptado.</li>
+      </ul>
+
+      <h2>4. Aceptación e inicio de la obra</h2>
+      <p>
+        La obra se inicia una vez aceptado el presupuesto por escrito y recibido el primer pago acordado.
+        Antes de ese momento no se reservan fechas ni se compran materiales.
+      </p>
+
+      <h2>5. Plazos</h2>
+      <p>
+        El plazo de ejecución se informa al aceptar el presupuesto y se cuenta desde el inicio de los
+        trabajos. Puede extenderse por causas ajenas a nuestra gestión, como la demora en permisos
+        municipales, la falta de disponibilidad de materiales, condiciones del inmueble no visibles en la
+        visita, o cambios pedidos por el cliente durante la obra. Si el plazo se extiende por alguna de
+        estas causas, se lo comunicamos por escrito y acordamos la nueva fecha.
+      </p>
+
+      <h2>6. Pagos</h2>
+      <ul>
+        <li>Los pagos se acuerdan por escrito antes de comenzar y se asocian a etapas de avance de la obra.</li>
+        <li>El saldo se paga contra la entrega, en la revisión final con el cliente.</li>
+        <li>La compra de materiales especiales puede requerir un anticipo.</li>
+        <li>Toda entrega de dinero queda respaldada con comprobante.</li>
+      </ul>
+
+      <h2>7. Cambios y trabajos adicionales</h2>
+      <p>
+        Si el cliente pide un cambio durante la obra, o si aparece un trabajo que no se podía detectar en
+        la visita, se cotiza aparte y por escrito antes de ejecutarlo. No se ejecutan adicionales sin esa
+        aprobación. Los cambios pueden afectar el plazo original.
+      </p>
+
+      <h2>8. Permisos y normativa</h2>
+      <p>
+        Las obras que requieren permiso de la Dirección de Obras Municipales son gestionadas por el cliente
+        y por su cuenta, salvo que se acuerde lo contrario por escrito. Las instalaciones de gas y
+        electricidad se ejecutan según normativa vigente y quedan declaradas ante la Superintendencia de
+        Electricidad y Combustibles cuando corresponde.
+      </p>
+
+      <h2>9. Garantía</h2>
+      <p>
+        Todos los trabajos quedan con garantía por escrito, cuyo plazo y alcance se indican en el contrato
+        o en el presupuesto aceptado. Esa garantía cubre defectos de ejecución y no cubre el deterioro por
+        uso normal, el daño causado por terceros, ni las fallas de instalaciones o estructuras existentes
+        que no fueron intervenidas. Lo anterior es sin perjuicio de la garantía legal que reconoce la
+        Ley 19.496 sobre protección de los derechos de los consumidores.
+      </p>
+
+      <h2>10. Responsabilidad</h2>
+      <p>
+        Respondemos por la ejecución de las partidas contratadas. No respondemos por filtraciones,
+        humedades o fallas provenientes de instalaciones preexistentes que no fueron parte del trabajo
+        contratado, ni por daños derivados de causas externas, como sismos, inundaciones o intervenciones
+        de terceros. Cuando detectamos un problema de ese tipo durante la visita o la obra, se lo
+        informamos al cliente antes de continuar.
+      </p>
+
+      <h2>11. Cancelaciones y devoluciones</h2>
+      <ul>
+        <li>Si el cliente cancela antes de que comience la obra, se devuelve el monto pagado, descontando los materiales ya comprados y los trabajos de habilitación o demolición ya ejecutados.</li>
+        <li>Si la cancelación ocurre con la obra en curso, se liquida el avance real ejecutado y los materiales comprometidos.</li>
+        <li>Los materiales comprados a pedido del cliente y ya recibidos en obra no son reembolsables.</li>
+        <li>Toda devolución se realiza en un plazo máximo de 15 días hábiles desde la liquidación, por el mismo medio en que se recibió el pago.</li>
+      </ul>
+
+      <h2>12. Uso del sitio web</h2>
+      <p>
+        El contenido, las fotografías y los textos de este sitio son de propiedad de {e.razonSocial} y no
+        pueden reproducirse sin autorización. Las fotografías corresponden a obras ejecutadas por la
+        empresa. El sitio puede contener enlaces a plataformas de terceros, como WhatsApp o Google, cuyo
+        funcionamiento no depende de nosotros.
+      </p>
+
+      <h2>13. Datos personales</h2>
+      <p>
+        El tratamiento de los datos que usted entrega se rige por nuestra
+        <a href="/privacidad/">política de privacidad</a>.
+      </p>
+
+      <h2>14. Ley aplicable</h2>
+      <p>
+        Estas condiciones se rigen por la legislación chilena. Cualquier controversia se somete a los
+        tribunales competentes de la ciudad de Santiago, sin perjuicio de los derechos que la ley reconoce
+        al consumidor.
+      </p>
+
+      <h2>15. Modificaciones</h2>
+      <p>
+        Podemos actualizar estas condiciones. La versión vigente es la publicada en esta página, con su
+        fecha de actualización. Los cambios no afectan los presupuestos ya aceptados.
+      </p>
+
+      <p class="legal__volver"><a href="/contacto/">Volver a contacto</a></p>
+    </div>
+  </section>
+
+  <style>
+    .legal{max-width:760px}
+    .legal h1{font-size:clamp(30px,4vw,42px);line-height:1.15;margin:6px 0 10px}
+    .legal__fecha{margin:0 0 22px;font-size:13.5px;color:var(--muted);font-family:var(--mono)}
+    .legal__intro{margin:0 0 32px;padding:18px 20px;background:var(--paper-2);border-left:2px solid var(--gold);border-radius:var(--r-sm)}
+    .legal h2{font-size:18px;margin:32px 0 10px}
+    .legal p,.legal li{color:var(--body);font-size:15.5px;line-height:1.7}
+    .legal p{margin:0 0 12px}
+    .legal ul{margin:0 0 14px;padding-left:20px;display:grid;gap:7px}
+    .legal a{color:var(--gold-deep)}
+    .legal__volver{margin-top:38px;padding-top:22px;border-top:1px solid var(--line);font-weight:500}
+  </style>
+</Base>
