@@ -46,7 +46,7 @@ const schema = {
   url: 'https://tgsconstruccion.cl/',
   telephone: site.empresa.telefono,
   email: site.empresa.email,
-  areaServed: ['Santiago', 'Ñuñoa', 'Providencia', 'Las Condes', 'Huechuraba'],
+  areaServed: ['Santiago', ...site.empresa.comunas],
   description: 'Remodelación de cocinas, baños, terrazas y quinchos en Santiago de Chile.',
   address: { '@type': 'PostalAddress', addressLocality: 'Santiago', addressCountry: 'CL' },
 };
