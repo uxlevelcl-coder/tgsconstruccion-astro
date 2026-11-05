@@ -17,6 +17,7 @@ Un solo responsable coordina gasfitería, electricidad, cerámica, muebles y pin
 Cada obra parte con visita y medición, sigue con presupuesto detallado por partida y
 termina con revisión junto al cliente y garantía por escrito.
 
+Razón social: ${e.razonSocial} · RUT ${e.rut}
 Datos de contacto: WhatsApp ${e.telefono} · ${e.email} · ${e.direccion}
 Horario: ${e.horario}
 Cobertura: ${e.zonas}.
