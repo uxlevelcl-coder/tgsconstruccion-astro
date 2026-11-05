@@ -1,0 +1,123 @@
+---
+interface Medio { src: string; alt: string; video?: string; poster?: string }
+interface Props { medios: Medio[]; columnas?: number }
+const { medios, columnas = 4 } = Astro.props;
+---
+<div class={`galU${columnas === 3 ? " galU--3" : ""}`}>
+  {medios.map((m, i) => (
+    <figure
+      class={`gal__i${m.video ? " gal__i--vid" : ""}`}
+      data-lb={i}
+      role="button"
+      tabindex="0"
+      aria-label={`Ampliar: ${m.alt}`}
+    >
+      {m.video ? (
+        <>
+          <video
+            src={m.video}
+            poster={m.src}
+            muted
+            loop
+            playsinline
+            preload="none"
+            data-galvideo
+            aria-label={m.alt}
+            data-lb-src={m.video}
+            data-lb-type="video"></video>
+          <span class="gal__play" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="13" height="13"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg>
+          </span>
+        </>
+      ) : (
+        <img src={m.src} alt={m.alt} loading="lazy" data-lb-src={m.src} data-lb-type="image" />
+      )}
+      <span class="gal__zoom" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5"/></svg>
+      </span>
+    </figure>
+  ))}
+</div>
+
+<style>
+  .galU{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+  .galU--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media(max-width:900px){.galU,.galU--3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:420px){.galU,.galU--3{gap:10px}}
+</style>
+
+<script>
+  document.querySelectorAll('video[data-galvideo]').forEach((v) => {
+    const fig = v.closest('.gal__i');
+    if (!fig || fig.dataset.hoverListo) return;
+    fig.dataset.hoverListo = '1';
+    const play = () => { v.play().catch(() => {}); };
+    const stop = () => { v.pause(); v.currentTime = 0; };
+    fig.addEventListener('mouseenter', play);
+    fig.addEventListener('mouseleave', stop);
+    fig.addEventListener('focus', play);
+    fig.addEventListener('blur', stop);
+  });
+
+  (() => {
+    const figs = [...document.querySelectorAll('.galU .gal__i')];
+    if (!figs.length || document.querySelector('.lb')) return;
+    const items = figs.map((f) => {
+      const m = f.querySelector('[data-lb-src]');
+      return {
+        src: m.getAttribute('data-lb-src'),
+        tipo: m.getAttribute('data-lb-type'),
+        alt: (f.querySelector('video')?.getAttribute('aria-label')) || (f.querySelector('img')?.getAttribute('alt')) || '',
+      };
+    });
+    const ov = document.createElement('div');
+    ov.className = 'lb';
+    ov.setAttribute('role', 'dialog');
+    ov.setAttribute('aria-modal', 'true');
+    ov.setAttribute('aria-label', 'Galería de proyectos');
+    ov.innerHTML =
+      '<button type="button" class="lb__x" aria-label="Cerrar">Cerrar</button>' +
+      '<button type="button" class="lb__nav lb__nav--prev" aria-label="Anterior"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>' +
+      '<figure class="lb__fig"><div class="lb__media"></div><figcaption class="lb__cap"></figcaption></figure>' +
+      '<button type="button" class="lb__nav lb__nav--next" aria-label="Siguiente"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>';
+    document.body.appendChild(ov);
+    const media = ov.querySelector('.lb__media');
+    const cap = ov.querySelector('.lb__cap');
+    let idx = 0, foco = null;
+    const pinta = () => {
+      const it = items[idx];
+      media.innerHTML = it.tipo === 'video'
+        ? `<video src="${it.src}" controls autoplay loop playsinline></video>`
+        : `<img src="${it.src}" alt="${it.alt}">`;
+      cap.textContent = it.alt;
+    };
+    const abre = (i) => {
+      idx = i; foco = document.activeElement; pinta();
+      ov.classList.add('is-open'); document.documentElement.classList.add('lb-open');
+      ov.querySelector('.lb__x').focus();
+    };
+    const cierra = () => {
+      ov.classList.remove('is-open');
+      document.documentElement.classList.remove('lb-open');
+      media.innerHTML = '';
+      if (foco) foco.focus();
+    };
+    const mueve = (d) => { idx = (idx + d + items.length) % items.length; pinta(); };
+    figs.forEach((f, i) => {
+      f.addEventListener('click', () => abre(i));
+      f.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); abre(i); }
+      });
+    });
+    ov.querySelector('.lb__x').addEventListener('click', cierra);
+    ov.querySelector('.lb__nav--prev').addEventListener('click', () => mueve(-1));
+    ov.querySelector('.lb__nav--next').addEventListener('click', () => mueve(1));
+    ov.addEventListener('click', (ev) => { if (ev.target === ov) cierra(); });
+    document.addEventListener('keydown', (ev) => {
+      if (!ov.classList.contains('is-open')) return;
+      if (ev.key === 'Escape') cierra();
+      if (ev.key === 'ArrowLeft') mueve(-1);
+      if (ev.key === 'ArrowRight') mueve(1);
+    });
+  })();
+</script>
