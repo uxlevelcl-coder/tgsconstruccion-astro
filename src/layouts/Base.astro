@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -19,6 +20,25 @@ const ogImage = new URL(image ?? '/img/og-tgs.jpg', Astro.site).toString();
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Consentimiento por defecto: todo denegado salvo lo que el usuario ya aceptó -->
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){
+      var g = null;
+      try { g = JSON.parse(localStorage.getItem('tgs_cookies_v1') || 'null'); } catch(e) {}
+      var decidido = !!(g && g.decision);
+      gtag('consent', 'default', {
+        ad_storage: decidido && g.publicidad ? 'granted' : 'denied',
+        ad_user_data: decidido && g.publicidad ? 'granted' : 'denied',
+        ad_personalization: decidido && g.publicidad ? 'granted' : 'denied',
+        analytics_storage: decidido && g.analitica ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 400
+      });
+    })();
+  </script>
   <!-- Google Tag Manager -->
   <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NG86DKBV');</script>
   <!-- End Google Tag Manager -->
@@ -48,6 +68,7 @@ const ogImage = new URL(image ?? '/img/og-tgs.jpg', Astro.site).toString();
   <Header />
   <main><slot /></main>
   <Footer />
+  <CookieConsent />
   <script>
     // Evento de WhatsApp para GTM / GA4 (reemplaza joinchat_click del sitio anterior)
     window.dataLayer = window.dataLayer || [];

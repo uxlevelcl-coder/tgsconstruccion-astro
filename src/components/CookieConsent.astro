@@ -1,0 +1,172 @@
+---
+---
+
+<div class="ck" id="ck" hidden>
+  <div class="ck__card" role="dialog" aria-labelledby="ck-t" aria-describedby="ck-d">
+    <p class="ck__t" id="ck-t">Tu privacidad</p>
+    <p class="ck__p" id="ck-d">
+      Usamos cookies para medir cómo se usa el sitio y mejorar lo que ve. Puede aceptar todo,
+      rechazar todo o elegir por categoría. Rechazar es tan fácil como aceptar.
+      <a href="/privacidad/">Política de privacidad</a>.
+    </p>
+    <div class="ck__b">
+      <button type="button" class="ck__btn" data-ck="rechazar">Rechazar todo</button>
+      <button type="button" class="ck__btn" data-ck="config">Configurar</button>
+      <button type="button" class="ck__btn ck__btn--si" data-ck="aceptar">Aceptar todo</button>
+    </div>
+  </div>
+</div>
+
+<div class="ckp" id="ckp" hidden>
+  <div class="ckp__box" role="dialog" aria-modal="true" aria-labelledby="ckp-t" tabindex="-1">
+    <h2 id="ckp-t">Preferencias de cookies</h2>
+    <p class="ckp__p">Elija qué cookies acepta. Las necesarias no se pueden desactivar porque sin ellas el sitio no funciona.</p>
+
+    <ul class="ckp__lista">
+      <li class="ckp__item">
+        <div>
+          <strong>Necesarias</strong>
+          <span>Mantienen el sitio funcionando y recuerdan su decisión sobre las cookies. No se pueden desactivar.</span>
+        </div>
+        <span class="ckp__siempre">Siempre activas</span>
+      </li>
+      <li class="ckp__item">
+        <label>
+          <div>
+            <strong>Analítica</strong>
+            <span>Google Analytics 4. Cuenta visitas y muestra qué páginas sirven, con datos agregados.</span>
+          </div>
+          <input type="checkbox" id="ckAnalitica" />
+        </label>
+      </li>
+      <li class="ckp__item">
+        <label>
+          <div>
+            <strong>Publicidad</strong>
+            <span>Meta Pixel y medición de campañas. Permite mostrar anuncios a quien ya visitó el sitio.</span>
+          </div>
+          <input type="checkbox" id="ckPublicidad" />
+        </label>
+      </li>
+    </ul>
+
+    <div class="ckp__b">
+      <button type="button" class="ckp__btn" data-ck="rechazar">Rechazar todo</button>
+      <button type="button" class="ckp__btn ckp__btn--si" data-ck="guardar">Guardar preferencias</button>
+      <button type="button" class="ckp__btn" data-ck="aceptar">Aceptar todo</button>
+    </div>
+    <button type="button" class="ckp__x" data-ck="cerrar" aria-label="Cerrar">Cerrar</button>
+  </div>
+</div>
+
+<style>
+  .ck{position:fixed;left:clamp(14px,2.4vw,28px);bottom:clamp(14px,2.4vw,28px);z-index:150;width:min(420px,calc(100% - 28px))}
+  .ck[hidden],.ckp[hidden]{display:none}
+  .ck__card{background:var(--white);border:1px solid var(--line-2);border-radius:var(--r-lg);padding:22px 22px 20px;box-shadow:var(--sh-3)}
+  .ck__t{margin:0 0 8px;font-size:16px;font-weight:600;color:var(--ink)}
+  .ck__p{margin:0 0 16px;font-size:13.5px;line-height:1.55;color:var(--body)}
+  .ck__p a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:2px}
+  .ck__b{display:flex;flex-wrap:wrap;gap:8px}
+  .ck__btn{flex:1 1 auto;min-height:42px;padding:0 16px;border-radius:var(--r-sm);border:1px solid var(--line-2);
+    background:var(--white);color:var(--ink);font:inherit;font-size:13.5px;font-weight:500;cursor:pointer;
+    transition:background .16s var(--ease),border-color .16s var(--ease)}
+  .ck__btn:hover{background:var(--paper-2);border-color:var(--line-2)}
+  .ck__btn--si{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:600}
+  .ck__btn--si:hover{background:#e5771f;border-color:#e5771f}
+
+  .ckp{position:fixed;inset:0;z-index:220;display:flex;align-items:center;justify-content:center;
+    padding:20px;background:rgba(21,19,17,.55);backdrop-filter:blur(2px)}
+  .ckp__box{position:relative;background:var(--white);border-radius:var(--r-lg);padding:clamp(22px,3vw,32px);
+    width:min(560px,100%);max-height:88vh;overflow:auto;box-shadow:var(--sh-3)}
+  .ckp__box h2{margin:0 0 8px;font-size:21px}
+  .ckp__p{margin:0 0 18px;font-size:14px;line-height:1.55;color:var(--body)}
+  .ckp__lista{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:2px}
+  .ckp__item{border-top:1px solid var(--line);padding:14px 0}
+  .ckp__item label{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;cursor:pointer}
+  .ckp__item strong{display:block;font-size:14.5px;color:var(--ink);margin-bottom:3px}
+  .ckp__item span{display:block;font-size:13px;line-height:1.5;color:var(--muted)}
+  .ckp__item input[type=checkbox]{width:20px;height:20px;flex:none;margin-top:2px;accent-color:var(--gold-deep);cursor:pointer}
+  .ckp__siempre{font-size:12px!important;font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase;
+    color:var(--gold-deep)!important;white-space:nowrap;padding-top:3px}
+  .ckp__b{display:flex;flex-wrap:wrap;gap:10px}
+  .ckp__btn{flex:1 1 140px;min-height:44px;padding:0 18px;border-radius:var(--r-sm);border:1px solid var(--line-2);white-space:nowrap;
+    background:var(--white);color:var(--ink);font:inherit;font-size:14px;font-weight:500;cursor:pointer}
+  .ckp__btn:hover{background:var(--paper-2)}
+  .ckp__btn--si{flex:1.5 1 190px;background:var(--gold);border-color:var(--gold);font-weight:600}
+  .ckp__btn--si:hover{background:#e5771f;border-color:#e5771f}
+  .ckp__x{position:absolute;top:10px;right:12px;background:none;border:0;font:inherit;font-size:12.5px;
+    color:var(--muted);cursor:pointer;padding:8px;text-decoration:underline;text-underline-offset:2px}
+
+  @media (max-width:640px){
+    .ck{left:12px;right:12px;bottom:86px;width:auto}
+    .ck__b{flex-direction:column}
+  }
+  @media (prefers-reduced-motion:reduce){.ck__btn,.ckp__btn{transition:none}}
+</style>
+
+<script>
+  (() => {
+    const CLAVE = 'tgs_cookies_v1';
+    const ck = document.getElementById('ck');
+    const ckp = document.getElementById('ckp');
+    const analitica = document.getElementById('ckAnalitica');
+    const publicidad = document.getElementById('ckPublicidad');
+
+    const leer = () => {
+      try { return JSON.parse(localStorage.getItem(CLAVE) || 'null'); } catch { return null; }
+    };
+    const avisar = (c) => {
+      const estado = {
+        ad_storage: c.publicidad ? 'granted' : 'denied',
+        ad_user_data: c.publicidad ? 'granted' : 'denied',
+        ad_personalization: c.publicidad ? 'granted' : 'denied',
+        analytics_storage: c.analitica ? 'granted' : 'denied',
+      };
+      if (typeof (window as any).gtag === 'function') (window as any).gtag('consent', 'update', estado);
+      document.dispatchEvent(new CustomEvent('tgs:consent', { detail: estado }));
+    };
+    const guardar = (c, cerrarTodo = true) => {
+      localStorage.setItem(CLAVE, JSON.stringify({ ...c, decision: true, fecha: new Date().toISOString() }));
+      avisar(c);
+      ck.hidden = true;
+      if (cerrarTodo) ckp.hidden = true;
+    };
+    const abrirBanner = () => { ck.hidden = false; ckp.hidden = true; };
+    const abrirPanel = () => {
+      const g = leer() || { analitica: false, publicidad: false };
+      analitica.checked = !!g.analitica;
+      publicidad.checked = !!g.publicidad;
+      ckp.hidden = false;
+      document.querySelector('.ckp__box')?.focus();
+    };
+
+    (window as any).abrirCookies = abrirPanel;
+
+    ck.addEventListener('click', (ev) => {
+      const b = (ev.target as HTMLElement).closest('[data-ck]') as HTMLElement | null;
+      if (!b) return;
+      const accion = b.dataset.ck;
+      if (accion === 'aceptar') guardar({ analitica: true, publicidad: true });
+      if (accion === 'rechazar') guardar({ analitica: false, publicidad: false });
+      if (accion === 'config') abrirPanel();
+    });
+
+    ckp.addEventListener('click', (ev) => {
+      const b = (ev.target as HTMLElement).closest('[data-ck]') as HTMLElement | null;
+      if (!b) return;
+      const accion = b.dataset.ck;
+      if (accion === 'guardar') guardar({ analitica: analitica.checked, publicidad: publicidad.checked });
+      if (accion === 'aceptar') guardar({ analitica: true, publicidad: true });
+      if (accion === 'rechazar') guardar({ analitica: false, publicidad: false });
+      if (accion === 'cerrar') ckp.hidden = true;
+    });
+    ckp.addEventListener('click', (ev) => { if (ev.target === ckp) ckp.hidden = true; });
+
+    document.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Escape' && !ckp.hidden) ckp.hidden = true;
+    });
+
+    // primera visita: solo la tarjeta, sin abrir el panel de categorías
+    if (!leer()?.decision) ck.hidden = false;
+  })();
+</script>
